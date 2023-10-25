@@ -4,6 +4,10 @@
  */
 package Ventanas;
 
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.Date;
+
 /**
  *
  * @author dasan
@@ -29,8 +33,11 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         JBoAtras = new javax.swing.JButton();
         JBoSiguente = new javax.swing.JButton();
         jBoCancel = new javax.swing.JButton();
+        jOpt1 = new javax.swing.JComboBox<>();
+        jCalendar2 = new com.toedter.calendar.JCalendar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(450, 390));
 
         JBoAtras.setText("Atras");
         JBoAtras.addActionListener(new java.awt.event.ActionListener() {
@@ -53,23 +60,42 @@ public class VenSelCanYHor extends javax.swing.JFrame {
             }
         });
 
+        jOpt1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "microfutbol", "voleibol", "basquetbol" }));
+        jOpt1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jOpt1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(152, Short.MAX_VALUE)
-                .addComponent(JBoAtras)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JBoSiguente)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBoCancel)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jOpt1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jCalendar2, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 13, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(JBoAtras)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(JBoSiguente)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBoCancel)))
                 .addGap(12, 12, 12))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(271, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jOpt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCalendar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBoAtras)
                     .addComponent(JBoSiguente)
@@ -77,7 +103,7 @@ public class VenSelCanYHor extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        setSize(new java.awt.Dimension(416, 308));
+        setSize(new java.awt.Dimension(496, 397));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -96,6 +122,12 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jBoCancelActionPerformed
+
+    
+    private void jOpt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jOpt1ActionPerformed
+        // TODO add your handling code here:
+        this.TCancha();
+    }//GEN-LAST:event_jOpt1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,6 +168,8 @@ public class VenSelCanYHor extends javax.swing.JFrame {
     private javax.swing.JButton JBoAtras;
     private javax.swing.JButton JBoSiguente;
     private javax.swing.JButton jBoCancel;
+    private com.toedter.calendar.JCalendar jCalendar2;
+    private javax.swing.JComboBox<String> jOpt1;
     // End of variables declaration//GEN-END:variables
 
     private void regresar() {
@@ -149,7 +183,24 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         VentanaDatosContacto sec3 = new VentanaDatosContacto();
         sec3.show();
         dispose();
+        String SelCan = TCancha();
+        Date DiaSel = this.jCalendar2.getDate();
+        //String Cal = this.jMonthChooser1.toString();
+        //String Cal = this.jCalendar1.getTodayButtonText();
+        System.out.print(DiaSel+"\n");
+        System.out.print(SelCan);
         
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+//    UtilDateModel model = new UtilDateModel();
+//    JDatePanelImpl datePanel = new JDatePanelImpl(model);
+//    JDatePickerImpl datePicker = new JDatePickerImpl(datePanel);
+// 
+//    frame.add(datePicker);
+
+    private String TCancha() {
+        String opt = String.valueOf(this.jOpt1.getSelectedItem());
+        return opt;
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

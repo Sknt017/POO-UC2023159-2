@@ -29,8 +29,17 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         JBoAtras = new javax.swing.JButton();
         JBoSiguente = new javax.swing.JButton();
         jBoCancel = new javax.swing.JButton();
+        jNombre = new javax.swing.JTextField();
+        jEmail = new javax.swing.JTextField();
+        jcont1 = new javax.swing.JTextField();
+        jCont2 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(450, 390));
 
         JBoAtras.setText("Atras");
         JBoAtras.addActionListener(new java.awt.event.ActionListener() {
@@ -48,23 +57,65 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
             }
         });
 
+        jNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNombreActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Nombre Contacto: ");
+
+        jLabel2.setText("Correo Electronico: ");
+
+        jLabel3.setText("Telefono Contacto 1:");
+
+        jLabel4.setText("Telefono Contacto 2:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(152, Short.MAX_VALUE)
-                .addComponent(JBoAtras)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JBoSiguente)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBoCancel)
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(JBoAtras)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(JBoSiguente)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBoCancel))
+                    .addComponent(jEmail)
+                    .addComponent(jcont1)
+                    .addComponent(jCont2))
                 .addGap(12, 12, 12))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(271, Short.MAX_VALUE)
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jcont1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCont2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBoAtras)
                     .addComponent(JBoSiguente)
@@ -72,7 +123,7 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        setSize(new java.awt.Dimension(416, 308));
+        setSize(new java.awt.Dimension(496, 397));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -85,6 +136,10 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jBoCancelActionPerformed
+
+    private void jNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jNombreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,6 +180,14 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
     private javax.swing.JButton JBoAtras;
     private javax.swing.JButton JBoSiguente;
     private javax.swing.JButton jBoCancel;
+    private javax.swing.JTextField jCont2;
+    private javax.swing.JTextField jEmail;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField jNombre;
+    private javax.swing.JTextField jcont1;
     // End of variables declaration//GEN-END:variables
 
     private void regresar() {
@@ -132,5 +195,11 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         sec2.show();
         dispose(); 
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    public void tomarDatosContacto(){
+        String NombreU = this.jNombre.getText();
+        String UEmail = this.jEmail.getText();
+        int Tel1 = Integer.parseInt(this.jcont1.getText());
+        int Tel2 = Integer.parseInt(this.jCont2.getText());
     }
 }
