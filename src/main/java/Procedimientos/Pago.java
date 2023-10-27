@@ -12,7 +12,6 @@ public class Pago {
     public int CCNumero;
     public String titularCC;
     public int CCV;
-    
     public void registrarDatosPago(){
         
     }

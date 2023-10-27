@@ -9,6 +9,7 @@ import java.awt.event.MouseListener;
 import java.util.Date;
 import Procedimientos.Canchas;
 import Procedimientos.Horarios;
+import java.util.Arrays;
 
 /**
  *
@@ -182,28 +183,27 @@ public class VenSelCanYHor extends javax.swing.JFrame {
 
     private void irADatosContacto() {
         Canchas cha = new Canchas();
+        Horarios hor = new Horarios();
         VentanaDatosContacto sec3 = new VentanaDatosContacto();
         sec3.show();
         dispose();
         int SelCan = TCancha();
-        Date DiaSel = this.jCalendar2.getDate();
-        //String Cal = this.jMonthChooser1.toString();
-        //String Cal = this.jCalendar1.getTodayButtonText();
-        System.out.print(DiaSel+"\n");
+        //Date DiaSel = this.jCalendar2.getDate();
+        hor.fechaReserva = this.jCalendar2.getDate();
+        System.out.print(hor.fechaReserva+"\n");
         System.out.print(SelCan);
+        //System.out.print(String.valueOf(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan, WIDTH)) );
+        //System.out.print(System.arraycopy(cha.getDescripccionCancha(), ERROR, sec3, ERROR, WIDTH));
+        System.out.println (Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)/*cha.getDescripccionCancha()*/));
+        
         
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-//    UtilDateModel model = new UtilDateModel();
-//    JDatePanelImpl datePanel = new JDatePanelImpl(model);
-//    JDatePickerImpl datePicker = new JDatePickerImpl(datePanel);
-// 
-//    frame.add(datePicker);
 
     private int TCancha() {
         //String opt = String.valueOf(this.jOpt1.getSelectedItem());
         //String opt = String.valueOf(this.jOpt1.getItemAt(width));
-        int opt = this.jOpt1.getSelectedIndex()+1;
+        int opt = this.jOpt1.getSelectedIndex();
                 
         return opt;
         

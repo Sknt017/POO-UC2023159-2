@@ -11,7 +11,12 @@ import java.util.Date;
  * @author dasan
  */
 public class Horarios {
+    // desplegar los datos recibidos del jframe form venselcanyhor aca
+    // realizar lo mismo en canchas.java
     public Date fechaReserva;
     public int horasReserva;
+    public Date obtenerFechasReserva(){
+        return fechaReserva;
+    }
     
 }
