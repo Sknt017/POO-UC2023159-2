@@ -62,7 +62,7 @@ public class VenSelCanYHor extends javax.swing.JFrame {
             }
         });
 
-        jOpt1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "microfutbol", "voleibol", "basquetbol" }));
+        jOpt1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "seleccionar", "microfutbol", "voleibol", "basquetbol" }));
         jOpt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jOpt1ActionPerformed(evt);

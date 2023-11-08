@@ -13,5 +13,11 @@ public class Usuario {
     public String correoElectronicoUsuario;
     public int numeroContacto1;
     public int numeroContacto2;
+
+    @Override
+    public String toString() {
+        return "Nombre: "+nombreUsuario+
+                "\n Email: "+correoElectronicoUsuario+"\n Numero 1: "+numeroContacto1+"\n Numero 2: "+numeroContacto2;
+    }
     
 }

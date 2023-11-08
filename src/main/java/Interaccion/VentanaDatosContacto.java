@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Interaccion;
+import Procedimientos.Usuario;
 
 /**
  *
@@ -48,6 +49,11 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         });
 
         JBoSiguente.setText("Siguente");
+        JBoSiguente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBoSiguenteActionPerformed(evt);
+            }
+        });
 
         jBoCancel.setText("Cancelar");
         jBoCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -140,6 +146,11 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jNombreActionPerformed
 
+    private void JBoSiguenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBoSiguenteActionPerformed
+        // TODO add your handling code here:
+        this.siguiente();
+    }//GEN-LAST:event_JBoSiguenteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -196,9 +207,30 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public void tomarDatosContacto(){
+        Usuario dataU = new Usuario();
+        
         String NombreU = this.jNombre.getText();
         String UEmail = this.jEmail.getText();
         int Tel1 = Integer.parseInt(this.jcont1.getText());
         int Tel2 = Integer.parseInt(this.jCont2.getText());
+        
+        dataU.nombreUsuario = NombreU;
+        dataU.correoElectronicoUsuario = UEmail;
+        dataU.numeroContacto1 = Tel1;
+        dataU.numeroContacto2 = Tel2;
+        System.out.print(String.valueOf(dataU));
+    }
+
+    private void siguiente() {
+        VenMetodoPago sec4 = new VenMetodoPago();
+        tomarDatosContacto();
+        
+        sec4.show();
+        dispose();
+        
+        
+        
+        
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

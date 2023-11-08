@@ -94,10 +94,11 @@
     <Component class="javax.swing.JComboBox" name="jOpt1">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="3">
-            <StringItem index="0" value="microfutbol"/>
-            <StringItem index="1" value="voleibol"/>
-            <StringItem index="2" value="basquetbol"/>
+          <StringArray count="4">
+            <StringItem index="0" value="seleccionar"/>
+            <StringItem index="1" value="microfutbol"/>
+            <StringItem index="2" value="voleibol"/>
+            <StringItem index="3" value="basquetbol"/>
           </StringArray>
         </Property>
       </Properties>
