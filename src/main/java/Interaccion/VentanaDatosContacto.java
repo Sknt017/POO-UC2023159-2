@@ -10,6 +10,10 @@ import Procedimientos.Usuario;
  * @author dasan
  */
 public class VentanaDatosContacto extends javax.swing.JFrame {
+    public String NombreU;
+    public String UEmail;
+    public int Tel1;
+    public int Tel2;
 
     /**
      * Creates new form VentanaDatosContacto
@@ -155,30 +159,6 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaDatosContacto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaDatosContacto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaDatosContacto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaDatosContacto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VentanaDatosContacto().setVisible(true);
@@ -209,10 +189,10 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
     public void tomarDatosContacto(){
         Usuario dataU = new Usuario();
         
-        String NombreU = this.jNombre.getText();
-        String UEmail = this.jEmail.getText();
-        int Tel1 = Integer.parseInt(this.jcont1.getText());
-        int Tel2 = Integer.parseInt(this.jCont2.getText());
+        NombreU = this.jNombre.getText();
+        UEmail = this.jEmail.getText();
+        Tel1 = Integer.parseInt(this.jcont1.getText());
+        Tel2 = Integer.parseInt(this.jCont2.getText());
         
         dataU.nombreUsuario = NombreU;
         dataU.correoElectronicoUsuario = UEmail;
@@ -222,15 +202,11 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
     }
 
     private void siguiente() {
-        VenMetodoPago sec4 = new VenMetodoPago();
+        //VenMetodoPago sec4 = new VenMetodoPago();
+        VenDetallesFin sec4 = new VenDetallesFin();
         tomarDatosContacto();
-        
         sec4.show();
         dispose();
-        
-        
-        
-        
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
