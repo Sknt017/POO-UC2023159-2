@@ -12,8 +12,8 @@ import Procedimientos.Usuario;
  * @author dasan
  */
 public class VenDetallesFin extends javax.swing.JFrame {
-    Usuario datu = new Usuario();
-    VentanaDatosContacto DU = new VentanaDatosContacto();
+    //Usuario datu = new Usuario();
+    //VentanaDatosContacto DU = new VentanaDatosContacto();
     
     //Resumir res = new Resumir();
     /**
@@ -22,6 +22,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
     public VenDetallesFin() {
         initComponents();
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -136,19 +137,31 @@ public class VenDetallesFin extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
-        this.jLabel2.setText(String.valueOf(datu));
+        //this.jLabel2.setText(String.valueOf(datu));
+                Usuario u = new Usuario();
+        String Nu = u.nombreUsuario;
+        String Eu = u.correoElectronicoUsuario;
+        int nu1=u.numeroContacto1;
+        int nu2=u.numeroContacto2;
+        System.out.print(Nu);
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VenDetallesFin().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        Usuario u = new Usuario();
+//        String Nu = u.nombreUsuario;
+//        String Eu = u.correoElectronicoUsuario;
+//        int nu1=u.numeroContacto1;
+//        int nu2=u.numeroContacto2;
+//        System.out.print(nu2);
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new VenDetallesFin().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBoAtras;
@@ -158,38 +171,18 @@ public class VenDetallesFin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
-
-//    public String llenarResumen(){
-//        jLabel1.setText(String.valueOf(DatUSu));
-//        //Usuario DatUSu = new Usuario();
-//        //jTAResume.append(String.valueOf(DatUSu));
-//        return String.valueOf(DatUSu);
-//    };
-//    //jLabel1.setText(String.valueOf(DatUSu));
-//    llenarResumen h = new llenarResumen();
     
     private void regresar() {
-        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     private void irADatosContacto() {
+    }
+    private void llenarResumen() {   
+    }
+    VenDetallesFin(String NombreU, String UEmail, int Tel1, int Tel2) {
+            initComponents();
+        this.jLabel2.setText(NombreU+UEmail+String.valueOf(Tel1)+String.valueOf(Tel2));
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-//    private class llenarResumen { 
-//        public llenarResumen() {
-//            jLabel1.setText(String.valueOf(DatUSu));
-//        }
-//    }
-    //jLabel2.setText(String.valueOf(DatUSu));
-
-    private void llenarResumen() {
-        Resumir r = new Resumir();
-        String NombreU = DU.NombreU;
-        String EmaU = DU.UEmail;
-        int numU1 = DU.Tel1;
-        int numU2 = DU.Tel2;
-        this.jLabel2.setText(NombreU+EmaU+String.valueOf(numU1)+String.valueOf(numU2));
-        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

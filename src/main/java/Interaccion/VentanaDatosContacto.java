@@ -187,18 +187,19 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public void tomarDatosContacto(){
-        Usuario dataU = new Usuario();
+        //Usuario dataU = new Usuario();
         
         NombreU = this.jNombre.getText();
         UEmail = this.jEmail.getText();
         Tel1 = Integer.parseInt(this.jcont1.getText());
         Tel2 = Integer.parseInt(this.jCont2.getText());
         
-        dataU.nombreUsuario = NombreU;
-        dataU.correoElectronicoUsuario = UEmail;
-        dataU.numeroContacto1 = Tel1;
-        dataU.numeroContacto2 = Tel2;
-        System.out.print(String.valueOf(dataU));
+        //dataU.nombreUsuario = NombreU;
+        //dataU.correoElectronicoUsuario = UEmail;
+        //dataU.numeroContacto1 = Tel1;
+        //dataU.numeroContacto2 = Tel2;
+        //System.out.print(String.valueOf(dataU));
+        new Usuario(NombreU,UEmail,Tel1,Tel2);
     }
 
     private void siguiente() {
@@ -207,6 +208,7 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         tomarDatosContacto();
         sec4.show();
         dispose();
+        new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
