@@ -41,6 +41,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        JcSiguiente = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,6 +89,13 @@ public class VenMetodoPago extends javax.swing.JFrame {
 
         jLabel4.setText("CCV:");
 
+        JcSiguiente.setText("Siguiente");
+        JcSiguiente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JcSiguienteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -117,11 +125,13 @@ public class VenMetodoPago extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1)
                                     .addComponent(jLabel2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addComponent(jButton2)
-                                        .addGap(143, 143, 143)
+                                        .addGap(14, 14, 14)
+                                        .addComponent(JcSiguiente)
+                                        .addGap(18, 18, 18)
                                         .addComponent(jButton1))
                                     .addComponent(Neq, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap())
@@ -150,7 +160,8 @@ public class VenMetodoPago extends javax.swing.JFrame {
                 .addGap(136, 136, 136)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(JcSiguiente))
                 .addContainerGap())
         );
 
@@ -181,6 +192,11 @@ public class VenMetodoPago extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
+    private void JcSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JcSiguienteActionPerformed
+        // TODO add your handling code here:
+        this.siguiente();
+    }//GEN-LAST:event_JcSiguienteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -193,6 +209,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton JcSiguiente;
     private javax.swing.JButton Neq;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -220,5 +237,12 @@ public class VenMetodoPago extends javax.swing.JFrame {
         VNC.show();
         dispose();
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void siguiente() {
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        VenDetallesFin s = new VenDetallesFin();
+        s.show();
+        dispose();
     }
 }
