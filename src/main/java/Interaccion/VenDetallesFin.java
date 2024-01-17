@@ -4,18 +4,11 @@
  */
 package Interaccion;
 
-import Procedimientos.Resumir;
-import Procedimientos.Usuario;
-
 /**
  *
  * @author dasan
  */
 public class VenDetallesFin extends javax.swing.JFrame {
-    //Usuario datu = new Usuario();
-    //VentanaDatosContacto DU = new VentanaDatosContacto();
-    
-    //Resumir res = new Resumir();
     /**
      * Creates new form VenDetallesFin
      */
@@ -38,7 +31,6 @@ public class VenDetallesFin extends javax.swing.JFrame {
         jBoCancel = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,13 +59,6 @@ public class VenDetallesFin extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
 
-        jToggleButton1.setText("Actualizar");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -88,23 +73,18 @@ public class VenDetallesFin extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jToggleButton1)))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton1))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
@@ -135,17 +115,6 @@ public class VenDetallesFin extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jBoCancelActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
-        //this.jLabel2.setText(String.valueOf(datu));
-                Usuario u = new Usuario();
-        String Nu = u.nombreUsuario;
-        String Eu = u.correoElectronicoUsuario;
-        int nu1=u.numeroContacto1;
-        int nu2=u.numeroContacto2;
-        System.out.print(Nu);
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -169,15 +138,12 @@ public class VenDetallesFin extends javax.swing.JFrame {
     private javax.swing.JButton jBoCancel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
     
     private void regresar() {
     }
 
     private void irADatosContacto() {
-    }
-    private void llenarResumen() {   
     }
     VenDetallesFin(String NombreU, String UEmail, int Tel1, int Tel2) {
             initComponents();
