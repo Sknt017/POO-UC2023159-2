@@ -4,6 +4,8 @@
  */
 package Procedimientos;
 
+import Interaccion.VenDetallesFin;
+
 /**
  *
  * @author dasan
@@ -25,8 +27,9 @@ public class Usuario {
     
     public Usuario() {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        new VenDetallesFin(nombreUsuario,correoElectronicoUsuario,numeroContacto1,numeroContacto2);
     }
-
+    
     @Override
     public String toString() {
         return "Nombre: "+nombreUsuario+
