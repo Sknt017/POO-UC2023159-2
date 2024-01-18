@@ -204,11 +204,11 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
 
     private void siguiente() {
         //VenMetodoPago sec4 = new VenMetodoPago();
-        VenDetallesFin sec4 = new VenDetallesFin();
         tomarDatosContacto();
+        VenDetallesFin sec4 = new VenDetallesFin();
         sec4.show();
         dispose();
-        new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
+        //new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
