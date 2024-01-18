@@ -4,6 +4,8 @@
  */
 package Interaccion;
 
+import Procedimientos.Usuario;
+
 /**
  *
  * @author dasan
@@ -12,10 +14,19 @@ public class VenDetallesFin extends javax.swing.JFrame {
     /**
      * Creates new form VenDetallesFin
      */
-    public VenDetallesFin() {
-        initComponents();
-    }
 
+
+    public VenDetallesFin(String nombreUsuario, String correoElectronicoUsuario, int numeroContacto1, int numeroContacto2) {
+        //Usuario u = new Usuario();
+        initComponents();
+        this.jLabel2.setText(nombreUsuario+correoElectronicoUsuario+String.valueOf(numeroContacto1)+String.valueOf(numeroContacto2));
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    public VenDetallesFin(){
+        Usuario u = new Usuario();
+        initComponents();
+//        this.jLabel2.setText(u.nombreUsuario);//+correoElectronicoUsuario+String.valueOf(numeroContacto1)+String.valueOf(numeroContacto2));
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -145,10 +156,10 @@ public class VenDetallesFin extends javax.swing.JFrame {
 
     private void irADatosContacto() {
     }
-    VenDetallesFin(String NombreU, String UEmail, int Tel1, int Tel2) {
-            initComponents();
-        this.jLabel2.setText(NombreU+UEmail+String.valueOf(Tel1)+String.valueOf(Tel2));
-        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+//    VenDetallesFin(String NombreU, String UEmail, int Tel1, int Tel2) {
+//        initComponents();
+//        this.jLabel2.setText(NombreU+UEmail+String.valueOf(Tel1)+String.valueOf(Tel2));
+//        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
 
 }
