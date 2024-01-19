@@ -18,12 +18,19 @@ public class VenDetallesFin extends javax.swing.JFrame {
 
     public VenDetallesFin(String nombreUsuario, String correoElectronicoUsuario, int numeroContacto1, int numeroContacto2) {
         //Usuario u = new Usuario();
+        String nof, euf;
+        int pnf, pn2f;
+        nof = nombreUsuario;
+        euf = correoElectronicoUsuario; 
+        pnf = numeroContacto1;
+        pn2f = numeroContacto2;
         initComponents();
+        System.out.print("\n"+"nof && else: "+nof+" "+euf+" "+pnf+" "+pn2f);
         this.jLabel2.setText(nombreUsuario+correoElectronicoUsuario+String.valueOf(numeroContacto1)+String.valueOf(numeroContacto2));
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public VenDetallesFin(){
-        Usuario u = new Usuario();
+        //Usuario u = new Usuario();
         initComponents();
 //        this.jLabel2.setText(u.nombreUsuario);//+correoElectronicoUsuario+String.valueOf(numeroContacto1)+String.valueOf(numeroContacto2));
     }
