@@ -21,6 +21,7 @@ public class Usuario {
         this.correoElectronicoUsuario = UEmail;
         this.numeroContacto1 = Tel1;
         this.numeroContacto2 = Tel2;
+        new VenDetallesFin(nombreUsuario,correoElectronicoUsuario,numeroContacto1,numeroContacto2);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
