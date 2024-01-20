@@ -41,10 +41,10 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        jCajaDesde = new javax.swing.JComboBox<>();
+        jCajaHasta = new javax.swing.JComboBox<>();
+        jCDDiaoTarde = new javax.swing.JComboBox<>();
+        jCDDiaoTarde1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,23 +82,23 @@ public class VenSelCanYHor extends javax.swing.JFrame {
 
         jLabel3.setText("Hasta:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4:00", "5:00", "6:00", "7:00" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jCajaDesde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4:00", "5:00", "6:00", "7:00" }));
+        jCajaDesde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jCajaDesdeActionPerformed(evt);
             }
         });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4:00", "5:00", "6:00", "7:00" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        jCajaHasta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4:00", "5:00", "6:00", "7:00" }));
+        jCajaHasta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                jCajaHastaActionPerformed(evt);
             }
         });
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AM", "PM" }));
+        jCDDiaoTarde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AM", "PM" }));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AM", "PM" }));
+        jCDDiaoTarde1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AM", "PM" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,15 +117,15 @@ public class VenSelCanYHor extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jCajaDesde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox3, 0, 1, Short.MAX_VALUE)
+                                .addComponent(jCDDiaoTarde, 0, 1, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jCajaHasta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(3, 3, 3)
-                                .addComponent(jComboBox4, 0, 1, Short.MAX_VALUE))))
+                                .addComponent(jCDDiaoTarde1, 0, 1, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(JBoAtras)
@@ -150,11 +150,11 @@ public class VenSelCanYHor extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCajaDesde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCDDiaoTarde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCajaHasta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCDDiaoTarde1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBoAtras)
@@ -189,13 +189,13 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         this.TCancha();
     }//GEN-LAST:event_jOpt1ActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jCajaDesdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCajaDesdeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jCajaDesdeActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void jCajaHastaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCajaHastaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_jCajaHastaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,11 +212,11 @@ public class VenSelCanYHor extends javax.swing.JFrame {
     private javax.swing.JButton JBoAtras;
     private javax.swing.JButton JBoSiguente;
     private javax.swing.JButton jBoCancel;
+    private javax.swing.JComboBox<String> jCDDiaoTarde;
+    private javax.swing.JComboBox<String> jCDDiaoTarde1;
+    private javax.swing.JComboBox<String> jCajaDesde;
+    private javax.swing.JComboBox<String> jCajaHasta;
     private com.toedter.calendar.JCalendar jCalendar2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -234,28 +234,27 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         Canchas cha = new Canchas();
         Horarios hor = new Horarios();
         VentanaDatosContacto sec3 = new VentanaDatosContacto();
-        sec3.show();
-        dispose();
+
         int SelCan = TCancha();
-        //Date DiaSel = this.jCalendar2.getDate();
         hor.fechaReserva = this.jCalendar2.getDate();
-        System.out.print(hor.fechaReserva+"\n");
-        System.out.print(SelCan);
-        //System.out.print(String.valueOf(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan, WIDTH)) );
-        //System.out.print(System.arraycopy(cha.getDescripccionCancha(), ERROR, sec3, ERROR, WIDTH));
-        System.out.println (Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)/*cha.getDescripccionCancha()*/));
+        String Copt = String.valueOf(this.jOpt1.getSelectedItem());
+        //System.out.print(hor.fechaReserva+"\n");
+        System.out.print(String.valueOf(SelCan));
+        //int Sdia = hor.fechaReserva.getDay();
+        //System.out.print(Copt+"\n dia: "+Sdia);
+        System.out.println ("\n"+Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)/*cha.getDescripccionCancha()*/));
+        //String Dcan = Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1));
+        //new Canchas(hor.fechaReserva,Copt);
         
         
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        sec3.show();
+        dispose();
     }
 
     private int TCancha() {
-        //String opt = String.valueOf(this.jOpt1.getSelectedItem());
-        //String opt = String.valueOf(this.jOpt1.getItemAt(width));
-        int opt = this.jOpt1.getSelectedIndex();
-                
+        int opt = this.jOpt1.getSelectedIndex();        
         return opt;
-        
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
