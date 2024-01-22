@@ -10,6 +10,7 @@ import java.util.Date;
 import Procedimientos.Canchas;
 import Procedimientos.Horarios;
 import java.util.Arrays;
+import java.util.Calendar;
 
 /**
  *
@@ -231,16 +232,22 @@ public class VenSelCanYHor extends javax.swing.JFrame {
     }
 
     private void irADatosContacto() {
+        Date PickedDate;int Sdia;
         Canchas cha = new Canchas();
         Horarios hor = new Horarios();
+        Calendar calendar = Calendar.getInstance();
         VentanaDatosContacto sec3 = new VentanaDatosContacto();
-
+        //usar instancia calendar para extraer de hor.fechareserva el mes y el año de la variable de tipo Date "fechaReserva"
+        //usar hor.fechareserva instead of PickedDate variable
         int SelCan = TCancha();
         hor.fechaReserva = this.jCalendar2.getDate();
+        PickedDate = this.jCalendar2.getDate();
+        calendar.setTime(PickedDate);
         String Copt = String.valueOf(this.jOpt1.getSelectedItem());
         //System.out.print(hor.fechaReserva+"\n");
         System.out.print(String.valueOf(SelCan));
-        //int Sdia = hor.fechaReserva.getDay();
+        Sdia = calendar.get(Calendar.DATE);
+        System.out.print(" PickedDate day returns..  "+Sdia+" Stage picked... "+Copt);
         //System.out.print(Copt+"\n dia: "+Sdia);
         System.out.println ("\n"+Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)/*cha.getDescripccionCancha()*/));
         //String Dcan = Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1));
