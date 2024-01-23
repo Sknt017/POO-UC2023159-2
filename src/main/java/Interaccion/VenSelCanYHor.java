@@ -232,7 +232,7 @@ public class VenSelCanYHor extends javax.swing.JFrame {
     }
 
     private void irADatosContacto() {
-        Date PickedDate;int Sdia;
+        Date PickedDate; int Sdia,Smes,Sanio;
         Canchas cha = new Canchas();
         Horarios hor = new Horarios();
         Calendar calendar = Calendar.getInstance();
@@ -247,7 +247,9 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         //System.out.print(hor.fechaReserva+"\n");
         System.out.print(String.valueOf(SelCan));
         Sdia = calendar.get(Calendar.DATE);
-        System.out.print(" PickedDate day returns..  "+Sdia+" Stage picked... "+Copt);
+        Smes = calendar.get(Calendar.MONTH);
+        Sanio = calendar.get(Calendar.YEAR);
+        System.out.print(" PickedDate day returns..  "+Sdia+" month "+Smes+" anio "+Sanio+" Stage picked... "+Copt);
         //System.out.print(Copt+"\n dia: "+Sdia);
         System.out.println ("\n"+Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)/*cha.getDescripccionCancha()*/));
         //String Dcan = Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1));
