@@ -15,7 +15,7 @@ public class POOUC {
     public static void main(String[] args) {
         VentanaInicio n = new VentanaInicio();
         //System.out.println("Hello World!");
-        System.out.println("Project execution in progress");
-        n.show();;
+        System.out.println("Project execution in progress...");
+        n.show();
     }
 }
