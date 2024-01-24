@@ -14,21 +14,24 @@ public class VenDetallesFin extends javax.swing.JFrame {
     /**
      * Creates new form VenDetallesFin
      */
-
+        //String uf, ef;
+        //int nf, n2f;
 
     public VenDetallesFin(String nombreUsuario, String correoElectronicoUsuario, int numeroContacto1, int numeroContacto2) {
         //Usuario u = new Usuario();
-        String nof, euf;
-        int pnf, pn2f;
-        nof = nombreUsuario;
-        euf = correoElectronicoUsuario; 
-        pnf = numeroContacto1;
-        pn2f = numeroContacto2;
+        final String nof = nombreUsuario;
+        final String euf = correoElectronicoUsuario; 
+        final int pnf = numeroContacto1;
+        final int pn2f = numeroContacto2;
         initComponents();
-        System.out.print("\n"+"nof && else: "+nof+" "+euf+" "+pnf+" "+pn2f);
-        this.jLabel2.setText(nombreUsuario+correoElectronicoUsuario+String.valueOf(numeroContacto1)+String.valueOf(numeroContacto2));
+        System.out.print("""
+                         
+                         nof && else: """+nof+" "+euf+" "+pnf+" "+pn2f);
+        this.setdata(euf, euf, pnf, pn2f);
+        //this.jLabel2.setText(nombreUsuario+correoElectronicoUsuario+String.valueOf(numeroContacto1)+String.valueOf(numeroContacto2));
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    //private final String nombreU = nof;
     public VenDetallesFin(){
         //Usuario u = new Usuario();
         initComponents();
@@ -88,7 +91,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
                 .addComponent(JBoSiguente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBoCancel)
-                .addContainerGap())
+                .addGap(12, 12, 12))
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,7 +99,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
                         .addGap(6, 6, 6)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,5 +171,12 @@ public class VenDetallesFin extends javax.swing.JFrame {
 //        this.jLabel2.setText(NombreU+UEmail+String.valueOf(Tel1)+String.valueOf(Tel2));
 //        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
 //    }
+
+    private void setdata(String uf,String ef,int nf,int n2f) {
+        System.out.print("\n"+uf);
+        this.jLabel2.setText(uf+ef+String.valueOf(nf)+String.valueOf(n2f));
+        
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
 }
