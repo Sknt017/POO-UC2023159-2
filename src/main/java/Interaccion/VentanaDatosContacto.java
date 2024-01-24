@@ -4,6 +4,7 @@
  */
 package Interaccion;
 import Procedimientos.Usuario;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -203,11 +204,16 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
     }
 
     private void siguiente() {
-        //VenMetodoPago sec4 = new VenMetodoPago();
-        tomarDatosContacto();
-        VenDetallesFin sec4 = new VenDetallesFin();
-        sec4.show();
-        dispose();
+        try{
+            //VenMetodoPago sec4 = new VenMetodoPago();
+            tomarDatosContacto();
+            VenDetallesFin sec4 = new VenDetallesFin();
+            sec4.show();
+            dispose();
+        } catch(Exception e){
+            var b = JOptionPane.showConfirmDialog(rootPane, "Por favor confirmar los datos ingresados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+        }
+
         //new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
