@@ -5,31 +5,33 @@
 package Procedimientos;
 
 import Interaccion.VenDetallesFin;
+import Interaccion.VentanaDatosContacto;
 
 /**
  *
  * @author dasan
  */
 public class Usuario {    
-    public String nombreUsuario;
-    public String correoElectronicoUsuario;
-    public int numeroContacto1;
-    public int numeroContacto2;
+    VentanaDatosContacto vcu = new VentanaDatosContacto();
+    public final String nombreUsuario = vcu.getjNombretxt();
+    public final String correoElectronicoUsuario = vcu.getjEmailText();
+    public final int numeroContacto1 = Integer.parseInt(vcu.getCont1());
+    public final int numeroContacto2 = Integer.parseInt(vcu.getCont2());
 
-    public Usuario(String NombreU, String UEmail, int Tel1, int Tel2) {
-        this.nombreUsuario = NombreU;
-        this.correoElectronicoUsuario = UEmail;
-        this.numeroContacto1 = Tel1;
-        this.numeroContacto2 = Tel2;
-        new VenDetallesFin(nombreUsuario,correoElectronicoUsuario,numeroContacto1,numeroContacto2);
+    //public Usuario(String NombreU, String UEmail, int Tel1, int Tel2) {
+        //this.nombreUsuario = NombreU;
+        //this.correoElectronicoUsuario = UEmail;
+        //this.numeroContacto1 = Tel1;
+        //this.numeroContacto2 = Tel2;
+        //new VenDetallesFin(nombreUsuario,correoElectronicoUsuario,numeroContacto1,numeroContacto2);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    //}
 
     
-    public Usuario() {
+    //public Usuario() {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        new VenDetallesFin(nombreUsuario,correoElectronicoUsuario,numeroContacto1,numeroContacto2);
-    }
+        //new VenDetallesFin(nombreUsuario,correoElectronicoUsuario,numeroContacto1,numeroContacto2);
+    //}
     
     @Override
     public String toString() {

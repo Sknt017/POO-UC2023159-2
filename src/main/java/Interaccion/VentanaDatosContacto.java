@@ -5,16 +5,17 @@
 package Interaccion;
 import Procedimientos.Usuario;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
  * @author dasan
  */
 public class VentanaDatosContacto extends javax.swing.JFrame {
-    public String NombreU;
-    public String UEmail;
-    public int Tel1;
-    public int Tel2;
+    //public String NombreU;
+    //public String UEmail;
+    //public int Tel1;
+    //public int Tel2;
 
     /**
      * Creates new form VentanaDatosContacto
@@ -188,33 +189,44 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public void tomarDatosContacto(){
-        //Usuario dataU = new Usuario();
-        
-        NombreU = this.jNombre.getText();
-        UEmail = this.jEmail.getText();
-        Tel1 = Integer.parseInt(this.jcont1.getText());
-        Tel2 = Integer.parseInt(this.jCont2.getText());
+        Usuario dataU = new Usuario();
+        final String NombreU = this.jNombre.getText();
+        final String UEmail = this.jEmail.getText();
+        final int Tel1 = Integer.parseInt(this.jcont1.getText());
+        final int Tel2 = Integer.parseInt(this.jCont2.getText());
         
         //dataU.nombreUsuario = NombreU;
         //dataU.correoElectronicoUsuario = UEmail;
         //dataU.numeroContacto1 = Tel1;
         //dataU.numeroContacto2 = Tel2;
         //System.out.print(String.valueOf(dataU));
-        new Usuario(NombreU,UEmail,Tel1,Tel2);
+        //new Usuario(NombreU,UEmail,Tel1,Tel2);
     }
-
     private void siguiente() {
-        try{
+        //try{
             //VenMetodoPago sec4 = new VenMetodoPago();
             tomarDatosContacto();
             VenDetallesFin sec4 = new VenDetallesFin();
             sec4.show();
             dispose();
-        } catch(Exception e){
-            var b = JOptionPane.showConfirmDialog(rootPane, "Por favor confirmar los datos ingresados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
-        }
+        //}catch(Exception e){
+            //var b = JOptionPane.showConfirmDialog(rootPane, "Por favor confirmar los datos ingresados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+        //}
 
         //new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    public String getjNombretxt(){
+        return jNombre.getText();
+        
+    }
+    public String getjEmailText(){
+        return jEmail.getText();
+    }
+    public String getCont1(){
+        return /*Integer.parseInt(*/jcont1.getText();
+    }
+    public String getCont2(){
+        return /*Integer.parseInt(*/jCont2.getText();
+    }   
 }
