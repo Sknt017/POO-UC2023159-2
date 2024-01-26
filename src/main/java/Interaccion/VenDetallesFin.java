@@ -14,28 +14,21 @@ public class VenDetallesFin extends javax.swing.JFrame {
     /**
      * Creates new form VenDetallesFin
      */
-        //String uf, ef;
-        //int nf, n2f;
 
     public VenDetallesFin(String nombreUsuario, String correoElectronicoUsuario, int numeroContacto1, int numeroContacto2) {
-        //Usuario u = new Usuario();
-        final String nof = nombreUsuario;
-        final String euf = correoElectronicoUsuario; 
-        final int pnf = numeroContacto1;
-        final int pn2f = numeroContacto2;
         initComponents();
-        System.out.print("""
-                         
-                         nof && else: """+nof+" "+euf+" "+pnf+" "+pn2f);
-        this.setdata(euf, euf, pnf, pn2f);
-        //this.jLabel2.setText(nombreUsuario+correoElectronicoUsuario+String.valueOf(numeroContacto1)+String.valueOf(numeroContacto2));
+        show();
+        String nof = nombreUsuario;
+        String euf = correoElectronicoUsuario; 
+        int pnf = numeroContacto1;
+        int pn2f = numeroContacto2;
+//        System.out.print("""
+//                         nof && else: """+nof+" "+euf+" "+pnf+" "+pn2f);
+        this.jResumen.append("nombre Usuario: "+nof+"\n Correo Electronico Registrado: "+euf+"\nnumero de contacto "+pnf+"\notro numero de contacto: "+pn2f);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    //private final String nombreU = nof;
     public VenDetallesFin(){
-        //Usuario u = new Usuario();
         initComponents();
-//        this.jLabel2.setText(u.nombreUsuario);//+correoElectronicoUsuario+String.valueOf(numeroContacto1)+String.valueOf(numeroContacto2));
     }
 
     /**
@@ -51,8 +44,8 @@ public class VenDetallesFin extends javax.swing.JFrame {
         JBoSiguente = new javax.swing.JButton();
         jBoCancel = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jResumen = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,63 +72,45 @@ public class VenDetallesFin extends javax.swing.JFrame {
 
         jLabel1.setText("Detalles de la reserva:");
 
-        jLabel2.setText("jLabel2");
-
-        jToggleButton1.setText("jToggleButton1");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
+        jResumen.setColumns(20);
+        jResumen.setRows(5);
+        jScrollPane1.setViewportView(jResumen);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jToggleButton1))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(JBoAtras)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(JBoSiguente)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBoCancel)))
-                .addGap(12, 12, 12))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(JBoAtras)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(JBoSiguente)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBoCancel)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE))
+                .addGap(0, 34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JBoAtras)
-                            .addComponent(JBoSiguente)
-                            .addComponent(jBoCancel))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jToggleButton1)
-                        .addGap(170, 170, 170))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBoCancel)
+                    .addComponent(JBoSiguente)
+                    .addComponent(JBoAtras))
+                .addGap(25, 25, 25))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(496, 398));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -155,21 +130,10 @@ public class VenDetallesFin extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jBoCancelActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
-        this.fillLabel();
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
 //    public static void main(String args[]) {
-//        Usuario u = new Usuario();
-//        String Nu = u.nombreUsuario;
-//        String Eu = u.correoElectronicoUsuario;
-//        int nu1=u.numeroContacto1;
-//        int nu2=u.numeroContacto2;
-//        System.out.print(nu2);
 //        java.awt.EventQueue.invokeLater(new Runnable() {
 //            public void run() {
 //                new VenDetallesFin().setVisible(true);
@@ -182,32 +146,14 @@ public class VenDetallesFin extends javax.swing.JFrame {
     private javax.swing.JButton JBoSiguente;
     private javax.swing.JButton jBoCancel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JTextArea jResumen;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
     
     private void regresar() {
     }
 
     private void irADatosContacto() {
-    }
-//    VenDetallesFin(String NombreU, String UEmail, int Tel1, int Tel2) {
-//        initComponents();
-//        this.jLabel2.setText(NombreU+UEmail+String.valueOf(Tel1)+String.valueOf(Tel2));
-//        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
-
-    private void setdata(String uf,String ef,int nf,int n2f) {
-        System.out.print("\n"+uf);
-        this.jLabel2.setText(uf+ef+String.valueOf(nf)+String.valueOf(n2f));
-        
-        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private void fillLabel() {
-        VentanaDatosContacto vc = new VentanaDatosContacto();
-        
-        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }
