@@ -189,29 +189,26 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public void tomarDatosContacto(){
-        Usuario dataU = new Usuario();
-        final String NombreU = this.jNombre.getText();
-        final String UEmail = this.jEmail.getText();
-        final int Tel1 = Integer.parseInt(this.jcont1.getText());
-        final int Tel2 = Integer.parseInt(this.jCont2.getText());
-        
-        //dataU.nombreUsuario = NombreU;
-        //dataU.correoElectronicoUsuario = UEmail;
-        //dataU.numeroContacto1 = Tel1;
-        //dataU.numeroContacto2 = Tel2;
-        //System.out.print(String.valueOf(dataU));
+        //Usuario dataU = new Usuario();
         //new Usuario(NombreU,UEmail,Tel1,Tel2);
+        
     }
     private void siguiente() {
-        //try{
+        try{
+            String NombreU = this.jNombre.getText();
+            String UEmail = this.jEmail.getText();
+            int Tel1 = Integer.parseInt(this.jcont1.getText());
+            int Tel2 = Integer.parseInt(this.jCont2.getText());
+            VenDetallesFin sec4 = new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
+            //new VenDetallesFin();
+            //sec4.show();
             //VenMetodoPago sec4 = new VenMetodoPago();
-            tomarDatosContacto();
-            VenDetallesFin sec4 = new VenDetallesFin();
-            sec4.show();
+//            tomarDatosContacto();
             dispose();
-        //}catch(Exception e){
-            //var b = JOptionPane.showConfirmDialog(rootPane, "Por favor confirmar los datos ingresados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
-        //}
+        }catch(NumberFormatException e){
+            System.out.print(e.getMessage());
+            var b = JOptionPane.showConfirmDialog(rootPane, "Por favor confirmar los datos ingresados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+        }
 
         //new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
