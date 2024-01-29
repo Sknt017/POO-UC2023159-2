@@ -24,7 +24,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
         int pn2f = numeroContacto2;
 //        System.out.print("""
 //                         nof && else: """+nof+" "+euf+" "+pnf+" "+pn2f);
-        this.jResumen.append("nombre Usuario: "+nof+"\n Correo Electronico Registrado: "+euf+"\nnumero de contacto "+pnf+"\notro numero de contacto: "+pn2f);
+        this.jResumen.append("nombre Usuario: "+nof+"\nCorreo Electronico Registrado: "+euf+"\nnumero de contacto "+pnf+"\notro numero de contacto: "+pn2f);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public VenDetallesFin(){
