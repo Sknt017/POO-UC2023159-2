@@ -197,9 +197,10 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         try{
             String NombreU = this.jNombre.getText();
             String UEmail = this.jEmail.getText();
-            int Tel1 = Integer.parseInt(this.jcont1.getText());
+            int Tel1 = Integer.parseInt(this.jcont1.getText());//switch to long so it recieves actual phone numbers
             int Tel2 = Integer.parseInt(this.jCont2.getText());
-            VenDetallesFin sec4 = new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
+            //VenDetallesFin sec4 = new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
+            Usuario du = new Usuario (NombreU,UEmail,Tel1,Tel2);
             //new VenDetallesFin();
             //sec4.show();
             //VenMetodoPago sec4 = new VenMetodoPago();
