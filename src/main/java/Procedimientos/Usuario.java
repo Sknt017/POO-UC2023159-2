@@ -15,10 +15,10 @@ public class Usuario {
     VentanaDatosContacto vcu = new VentanaDatosContacto();
     private String nombreUsuario;
     private String correoElectronicoUsuario;
-    private int numeroContacto1;
-    private int numeroContacto2;
+    private Long numeroContacto1;
+    private Long numeroContacto2;
 
-    public Usuario(String NombreU, String UEmail, int Tel1, int Tel2) {
+    public Usuario(String NombreU, String UEmail, Long Tel1, Long Tel2) {
         this.nombreUsuario = NombreU;
         this.correoElectronicoUsuario = UEmail;
         this.numeroContacto1 = Tel1;
