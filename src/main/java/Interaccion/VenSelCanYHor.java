@@ -46,6 +46,8 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         jCajaHasta = new javax.swing.JComboBox<>();
         jCDDiaoTarde = new javax.swing.JComboBox<>();
         jCDDiaoTarde1 = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        jDescripccionC = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,6 +73,11 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         });
 
         jOpt1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "seleccionar", "microfutbol", "voleibol", "basquetbol" }));
+        jOpt1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jOpt1ItemStateChanged(evt);
+            }
+        });
         jOpt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jOpt1ActionPerformed(evt);
@@ -101,6 +108,10 @@ public class VenSelCanYHor extends javax.swing.JFrame {
 
         jCDDiaoTarde1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AM", "PM" }));
 
+        jLabel4.setText("Descripccion: ");
+
+        jDescripccionC.setText("-");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -111,7 +122,9 @@ public class VenSelCanYHor extends javax.swing.JFrame {
                         .addGap(24, 24, 24)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jOpt1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel4)
+                            .addComponent(jDescripccionC))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jCalendar2, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -147,7 +160,11 @@ public class VenSelCanYHor extends javax.swing.JFrame {
                         .addGap(2, 2, 2)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jOpt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jOpt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jDescripccionC)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -198,6 +215,27 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCajaHastaActionPerformed
 
+    private void jOpt1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jOpt1ItemStateChanged
+        // TODO add your handling code here:
+        Canchas cha = new Canchas();
+        int SelCan = TCancha();
+        switch(this.jOpt1.getSelectedIndex()){
+            case 0 -> {
+                this.jDescripccionC.setText("-");
+            }
+            case 1 -> {
+                this.jDescripccionC.setText(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)));
+            }
+            case 2 -> {
+                this.jDescripccionC.setText(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)));
+            }
+            case 3 ->{
+                this.jDescripccionC.setText(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)));
+            }
+                
+        }
+    }//GEN-LAST:event_jOpt1ItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -218,9 +256,11 @@ public class VenSelCanYHor extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jCajaDesde;
     private javax.swing.JComboBox<String> jCajaHasta;
     private com.toedter.calendar.JCalendar jCalendar2;
+    private javax.swing.JLabel jDescripccionC;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JComboBox<String> jOpt1;
     // End of variables declaration//GEN-END:variables
 
