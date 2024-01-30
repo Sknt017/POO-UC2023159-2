@@ -15,13 +15,13 @@ public class VenDetallesFin extends javax.swing.JFrame {
      * Creates new form VenDetallesFin
      */
 
-    public VenDetallesFin(String nombreUsuario, String correoElectronicoUsuario, int numeroContacto1, int numeroContacto2) {
+    public VenDetallesFin(String nombreUsuario, String correoElectronicoUsuario, Long numeroContacto1, Long numeroContacto2) {
         initComponents();
         show();
         String nof = nombreUsuario;
         String euf = correoElectronicoUsuario; 
-        int pnf = numeroContacto1;
-        int pn2f = numeroContacto2;
+        Long pnf = numeroContacto1;
+        Long pn2f = numeroContacto2;
 //        System.out.print("""
 //                         nof && else: """+nof+" "+euf+" "+pnf+" "+pn2f);
         this.jResumen.append("nombre Usuario: "+nof+"\nCorreo Electronico Registrado: "+euf+"\nnumero de contacto "+pnf+"\notro numero de contacto: "+pn2f);
