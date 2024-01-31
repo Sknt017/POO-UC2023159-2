@@ -4,6 +4,8 @@
  */
 package Interaccion;
 import Procedimientos.Usuario;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -71,6 +73,12 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         jNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jNombreActionPerformed(evt);
+            }
+        });
+
+        jEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jEmailActionPerformed(evt);
             }
         });
 
@@ -157,6 +165,10 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         this.siguiente();
     }//GEN-LAST:event_JBoSiguenteActionPerformed
 
+    private void jEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jEmailActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -197,8 +209,14 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         try{
             String NombreU = this.jNombre.getText();
             String UEmail = this.jEmail.getText();
-            Long Tel1 = Long.parseLong(this.jcont1.getText());//switch to long so it recieves actual phone numbers
-            Long Tel2 = Long.parseLong(this.jCont2.getText());
+            String regex = "^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(UEmail);
+            if(!matcher.matches()){
+                throw new IllegalArgumentException("Email input invalid");
+            }
+            Long Tel1 = Long.valueOf(this.jcont1.getText());//switch to long so it recieves actual phone numbers
+            Long Tel2 = Long.valueOf(this.jCont2.getText());
             //VenDetallesFin sec4 = new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
             Usuario du = new Usuario (NombreU,UEmail,Tel1,Tel2);
             //new VenDetallesFin();
@@ -207,24 +225,12 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
 //            tomarDatosContacto();
             dispose();
         }catch(NumberFormatException e){
-            System.out.print(e.getMessage());
-            var b = JOptionPane.showConfirmDialog(rootPane, "Por favor confirmar los datos ingresados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+            //System.out.print(e.getMessage());
+            var b = JOptionPane.showConfirmDialog(rootPane, "Validar numeros registrados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+        }catch(IllegalArgumentException e){
+            var b = JOptionPane.showConfirmDialog(rootPane, "Validar Correo electronico registrado", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
         }
-
         //new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    public String getjNombretxt(){
-        return jNombre.getText();
-        
-    }
-    public String getjEmailText(){
-        return jEmail.getText();
-    }
-    public String getCont1(){
-        return /*Integer.parseInt(*/jcont1.getText();
-    }
-    public String getCont2(){
-        return /*Integer.parseInt(*/jCont2.getText();
-    }   
 }
