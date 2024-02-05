@@ -141,17 +141,19 @@ public class VenSelCanYHor extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jCalendar2, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCajaDesde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCajaHasta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCajaDesde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCDDiaoTarde, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCajaHasta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(3, 3, 3)
-                        .addComponent(jCDDiaoTarde1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jCDDiaoTarde1, 0, 1, Short.MAX_VALUE)
+                            .addComponent(jCDDiaoTarde, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(33, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -175,7 +177,7 @@ public class VenSelCanYHor extends javax.swing.JFrame {
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jDescripccionC, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(109, Short.MAX_VALUE))
+                        .addGap(0, 103, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jCalendar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -192,8 +194,8 @@ public class VenSelCanYHor extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jBoCancel)
                             .addComponent(JBoSiguente)
-                            .addComponent(JBoAtras))
-                        .addContainerGap())))
+                            .addComponent(JBoAtras))))
+                .addContainerGap())
         );
 
         setSize(new java.awt.Dimension(496, 398));
@@ -236,18 +238,22 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         //link: https://itecnote.com/tecnote/java-jlabel-show-longer-text-as-multiple-lines/
         Canchas cha = new Canchas();
         int SelCan = TCancha();
+        StringBuilder sb = new StringBuilder(64);
         switch(this.jOpt1.getSelectedIndex()){
             case 0 -> {
                 this.jDescripccionC.setText("-");
             }
             case 1 -> {
-                this.jDescripccionC.setText(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)));
+                sb.append("<html>").append(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1))).append("</html>");
+                this.jDescripccionC.setText(sb.toString());
             }
             case 2 -> {
-                this.jDescripccionC.setText(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)));
+                sb.append("<html>").append(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1))).append("</html>");
+                this.jDescripccionC.setText(sb.toString());
             }
             case 3 ->{
-                this.jDescripccionC.setText(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)));
+                sb.append("<html>").append(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1))).append("</html>");
+                this.jDescripccionC.setText(sb.toString());
             }
                 
         }
