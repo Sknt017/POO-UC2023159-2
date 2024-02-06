@@ -236,27 +236,28 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         // TODO add your handling code here:
         //use StringBuilder to fix the truncaction of the label text. at jDescripccionC
         //link: https://itecnote.com/tecnote/java-jlabel-show-longer-text-as-multiple-lines/
-        Canchas cha = new Canchas();
-        int SelCan = TCancha();
-        StringBuilder sb = new StringBuilder(64);
-        switch(this.jOpt1.getSelectedIndex()){
-            case 0 -> {
-                this.jDescripccionC.setText("-");
-            }
-            case 1 -> {
-                sb.append("<html>").append(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1))).append("</html>");
-                this.jDescripccionC.setText(sb.toString());
-            }
-            case 2 -> {
-                sb.append("<html>").append(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1))).append("</html>");
-                this.jDescripccionC.setText(sb.toString());
-            }
-            case 3 ->{
-                sb.append("<html>").append(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1))).append("</html>");
-                this.jDescripccionC.setText(sb.toString());
-            }
-                
-        }
+        this.describirCancha(/*this.jOpt1.getSelectedIndex()*/);
+//        Canchas cha = new Canchas();
+//        int SelCan = TCancha();
+//        StringBuilder sb = new StringBuilder(64);
+//        switch(this.jOpt1.getSelectedIndex()){
+//            case 0 -> {
+//                this.jDescripccionC.setText("-");
+//            }
+//            case 1 -> {
+//                sb.append("<html>").append(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1))).append("</html>");
+//                this.jDescripccionC.setText(sb.toString());
+//            }
+//            case 2 -> {
+//                sb.append("<html>").append(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1))).append("</html>");
+//                this.jDescripccionC.setText(sb.toString());
+//            }
+//            case 3 ->{
+//                sb.append("<html>").append(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1))).append("</html>");
+//                this.jDescripccionC.setText(sb.toString());
+//            }
+//                
+//        }
     }//GEN-LAST:event_jOpt1ItemStateChanged
 
     private void jDescripccionCPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jDescripccionCPropertyChange
@@ -337,4 +338,13 @@ public class VenSelCanYHor extends javax.swing.JFrame {
 //    private Dimension Dimension(Dimension i, Dimension i0) {
 //        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
 //    }
+
+    private void describirCancha(/*int optC*/) {
+        Canchas cha = new Canchas();
+        int SelCan = TCancha();
+        StringBuilder sb = new StringBuilder(64);
+        sb.append("<html>").append(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1))).append("</html>");
+        this.jDescripccionC.setText(sb.toString());
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
