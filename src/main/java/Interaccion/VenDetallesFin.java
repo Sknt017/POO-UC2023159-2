@@ -150,6 +150,9 @@ public class VenDetallesFin extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     
     private void regresar() {
+        VenMetodoPago vp = new VenMetodoPago();
+        vp.setVisible(true);
+        this.dispose();
     }
 
     private void irADatosContacto() {
