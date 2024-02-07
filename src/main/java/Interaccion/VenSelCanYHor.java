@@ -10,6 +10,7 @@ import Procedimientos.Horarios;
 import java.awt.Dimension;
 import java.util.Arrays;
 import java.util.Calendar;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -300,6 +301,11 @@ public class VenSelCanYHor extends javax.swing.JFrame {
     }
 
     private void irADatosContacto() {
+        int SelCan = TCancha();
+        if(SelCan==0){
+            //throw new IllegalArgumentException("Please select a field.");
+            var b = JOptionPane.showConfirmDialog(rootPane, "Favor Seleccionar una cancha", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+        }else{
         Date PickedDate; int Sdia,Smes,Sanio;
         Canchas cha = new Canchas();
         Horarios hor = new Horarios();
@@ -307,13 +313,13 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         VentanaDatosContacto sec3 = new VentanaDatosContacto();
         //usar instancia calendar para extraer de hor.fechareserva el mes y el año de la variable de tipo Date "fechaReserva"
         //usar hor.fechareserva instead of PickedDate variable
-        int SelCan = TCancha();
+        //int SelCan = TCancha();
         hor.fechaReserva = this.jCalendar2.getDate();
         PickedDate = this.jCalendar2.getDate();
         calendar.setTime(PickedDate);
         String Copt = String.valueOf(this.jOpt1.getSelectedItem());
         //System.out.print(hor.fechaReserva+"\n");
-        System.out.print(String.valueOf(SelCan));
+        System.out.print("Picked option: "+String.valueOf(SelCan));
         Sdia = calendar.get(Calendar.DATE);
         Smes = calendar.get(Calendar.MONTH);
         Sanio = calendar.get(Calendar.YEAR);
@@ -322,11 +328,10 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         System.out.println ("\n"+Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)/*cha.getDescripccionCancha()*/));
         //String Dcan = Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1));
         //new Canchas(hor.fechaReserva,Copt);
-        
-        
-        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         sec3.show();
         dispose();
+        }
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     private int TCancha() {
@@ -340,11 +345,16 @@ public class VenSelCanYHor extends javax.swing.JFrame {
 //    }
 
     private void describirCancha(/*int optC*/) {
-        Canchas cha = new Canchas();
         int SelCan = TCancha();
+//        if(SelCan==0){
+//            throw new IllegalArgumentException("Please select a field.");
+//        }else{
+        Canchas cha = new Canchas();
+        //int SelCan = TCancha();
         StringBuilder sb = new StringBuilder(64);
         sb.append("<html>").append(Arrays.toString(Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1))).append("</html>");
         this.jDescripccionC.setText(sb.toString());
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//        }
     }
 }
