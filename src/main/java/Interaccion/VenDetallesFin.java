@@ -4,8 +4,6 @@
  */
 package Interaccion;
 
-import Procedimientos.Usuario;
-
 /**
  *
  * @author dasan
@@ -154,8 +152,6 @@ public class VenDetallesFin extends javax.swing.JFrame {
         vp.setVisible(true);
         this.dispose();
     }
-
     private void irADatosContacto() {
     }
-
 }
