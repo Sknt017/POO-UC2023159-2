@@ -110,6 +110,11 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         });
 
         jCDDiaoTarde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AM", "PM" }));
+        jCDDiaoTarde.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCDDiaoTardeItemStateChanged(evt);
+            }
+        });
 
         jCDDiaoTarde1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AM", "PM" }));
 
@@ -265,6 +270,10 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jDescripccionCPropertyChange
 
+    private void jCDDiaoTardeItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCDDiaoTardeItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCDDiaoTardeItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -308,13 +317,13 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         }else{
         Date PickedDate; int Sdia,Smes,Sanio;
         Canchas cha = new Canchas();
-        Horarios hor = new Horarios();
+//        Horarios hor = new Horarios();
         Calendar calendar = Calendar.getInstance();
-        VentanaDatosContacto sec3 = new VentanaDatosContacto();
+        //VentanaDatosContacto sec3 = new VentanaDatosContacto();
         //usar instancia calendar para extraer de hor.fechareserva el mes y el año de la variable de tipo Date "fechaReserva"
         //usar hor.fechareserva instead of PickedDate variable
         //int SelCan = TCancha();
-        hor.fechaReserva = this.jCalendar2.getDate();
+//        hor.fechaReserva = this.jCalendar2.getDate();
         PickedDate = this.jCalendar2.getDate();
         calendar.setTime(PickedDate);
         String Copt = String.valueOf(this.jOpt1.getSelectedItem());
@@ -323,12 +332,13 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         Sdia = calendar.get(Calendar.DATE);
         Smes = calendar.get(Calendar.MONTH);
         Sanio = calendar.get(Calendar.YEAR);
-        System.out.print(" PickedDate day returns..  "+Sdia+" month "+Smes+" anio "+Sanio+" Stage picked... "+Copt);
+        System.out.print("PickedDate day returns..  "+Sdia+" month "+Smes+" anio "+Sanio+" Stage picked... "+Copt);
         //System.out.print(Copt+"\n dia: "+Sdia);
         System.out.println ("\n"+Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)/*cha.getDescripccionCancha()*/));
         //String Dcan = Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1));
         //new Canchas(hor.fechaReserva,Copt);
-        sec3.show();
+        Horarios ho = new Horarios(Sdia,Smes,Sanio);
+        //sec3.show();
         dispose();
         }
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

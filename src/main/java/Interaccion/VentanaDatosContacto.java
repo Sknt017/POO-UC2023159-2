@@ -4,6 +4,7 @@
  */
 package Interaccion;
 import Procedimientos.Usuario;
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
@@ -24,6 +25,14 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
      */
     public VentanaDatosContacto() {
         initComponents();
+    }
+
+    public VentanaDatosContacto(int[] Fsel) {
+        show();
+        initComponents();
+        int[] FeD = Fsel;
+        System.out.print(Arrays.toString(FeD));
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**

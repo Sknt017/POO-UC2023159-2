@@ -4,6 +4,7 @@
  */
 package Procedimientos;
 
+import Interaccion.VentanaDatosContacto;
 import java.util.Date;
 
 /**
@@ -15,6 +16,14 @@ public class Horarios {
     // realizar lo mismo en canchas.java
     public Date fechaReserva;
     public int horasReserva;
+    public Horarios(int Sdia, int Smes, int Sanio) {
+        int Pdia = Sdia;
+        int Pmes = Smes;
+        int Panio = Sanio;
+        int[] Fsel={Pdia,Pmes,Panio};
+        VentanaDatosContacto sec3 = new VentanaDatosContacto(Fsel);
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     public Date obtenerFechasReserva(){
         return fechaReserva;
     }
