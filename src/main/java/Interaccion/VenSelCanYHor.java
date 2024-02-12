@@ -95,14 +95,14 @@ public class VenSelCanYHor extends javax.swing.JFrame {
 
         jLabel3.setText("Hasta:");
 
-        jCajaDesde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4:00", "5:00", "6:00", "7:00" }));
+        jCajaDesde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4:00", "5:00", "6:00", "7:00", "8:00", "9:00", "10:00" }));
         jCajaDesde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCajaDesdeActionPerformed(evt);
             }
         });
 
-        jCajaHasta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4:00", "5:00", "6:00", "7:00" }));
+        jCajaHasta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4:00", "5:00", "6:00", "7:00", "8:00", "9:00", "10:00" }));
         jCajaHasta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCajaHastaActionPerformed(evt);
@@ -317,13 +317,10 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         }else{
         Date PickedDate; int Sdia,Smes,Sanio;
         Canchas cha = new Canchas();
-//        Horarios hor = new Horarios();
         Calendar calendar = Calendar.getInstance();
         //VentanaDatosContacto sec3 = new VentanaDatosContacto();
         //usar instancia calendar para extraer de hor.fechareserva el mes y el año de la variable de tipo Date "fechaReserva"
         //usar hor.fechareserva instead of PickedDate variable
-        //int SelCan = TCancha();
-//        hor.fechaReserva = this.jCalendar2.getDate();
         PickedDate = this.jCalendar2.getDate();
         calendar.setTime(PickedDate);
         String Copt = String.valueOf(this.jOpt1.getSelectedItem());
@@ -335,8 +332,11 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         System.out.print("PickedDate day returns..  "+Sdia+" month "+Smes+" anio "+Sanio+" Stage picked... "+Copt);
         //System.out.print(Copt+"\n dia: "+Sdia);
         System.out.println ("\n"+Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)/*cha.getDescripccionCancha()*/));
+        int time1 = this.jCajaDesde.getSelectedIndex();
+        String pTime1 = String.valueOf(this.jCajaDesde.getSelectedItem());//<---------
         //String Dcan = Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1));
         //new Canchas(hor.fechaReserva,Copt);
+        System.out.print("Pricked time: "+pTime1+" "+ time1);
         Horarios ho = new Horarios(Sdia,Smes,Sanio);
         //sec3.show();
         dispose();
