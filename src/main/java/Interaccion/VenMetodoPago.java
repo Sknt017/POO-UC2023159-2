@@ -19,6 +19,11 @@ public class VenMetodoPago extends javax.swing.JFrame {
      */
     public VenMetodoPago() {
         initComponents();
+        this.jBotPagEfe3.setEnabled(false);
+        this.jBotPagNeq.setEnabled(false);
+        this.jTextField1.setEditable(false);
+        this.jTextField2.setEditable(false);
+        this.jTextField3.setEditable(false);
     }
 
     /**
@@ -70,6 +75,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
         });
 
         jBotPagEfe3.setText("Pago Efectivo");
+        jBotPagEfe3.setOpaque(true);
         jBotPagEfe3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBotPagEfe3ActionPerformed(evt);
@@ -284,6 +290,45 @@ public class VenMetodoPago extends javax.swing.JFrame {
 
     private void habilitarOpcion() {
         //
+        switch(this.jComboBox1.getSelectedIndex()){
+            case 0 ->{
+                this.jBotPagEfe3.setEnabled(false);
+                this.jBotPagNeq.setEnabled(false);
+                this.jTextField1.setEditable(false);
+                this.jTextField2.setEditable(false);
+                this.jTextField3.setEditable(false);
+            }
+            case 1 ->{
+                this.jTextField1.setEditable(true);
+                this.jTextField2.setEditable(true);
+                this.jTextField3.setEditable(true);
+                this.jBotPagEfe3.setEnabled(false);
+                this.jBotPagNeq.setEnabled(false);
+            }
+            case 2 ->{
+                this.jTextField1.setEditable(true);
+                this.jTextField2.setEditable(true);
+                this.jTextField3.setEditable(true);
+                this.jBotPagEfe3.setEnabled(false);
+                this.jBotPagNeq.setEnabled(false);
+            }
+            case 3 ->{
+                this.jBotPagEfe3.setEnabled(true);
+                this.jTextField1.setEditable(false);
+                this.jTextField2.setEditable(false);
+                this.jTextField3.setEditable(false);
+                this.jBotPagNeq.setEnabled(false);
+            }
+            case 4 ->{
+                this.jBotPagNeq.setEnabled(true);
+                this.jTextField1.setEditable(false);
+                this.jTextField2.setEditable(false);
+                this.jTextField3.setEditable(false);
+                this.jBotPagEfe3.setEnabled(false);
+            }
+            
+            
+        }
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
