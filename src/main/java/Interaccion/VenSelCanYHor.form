@@ -34,7 +34,7 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jOpt1" pref="112" max="32767" attributes="0"/>
+                  <Component id="jOpt1" pref="108" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -46,28 +46,22 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jCalendar2" min="-2" pref="293" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCajaDesde" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCajaHasta" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jCDDiaoTarde1" pref="0" max="32767" attributes="0"/>
-                          <Component id="jCDDiaoTarde" min="-2" pref="49" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jCajaHasta" min="-2" pref="124" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jCalendar2" alignment="0" min="-2" pref="293" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jCajaDesde" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="33" max="32767" attributes="0"/>
+              <EmptySpace pref="37" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
@@ -97,17 +91,15 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jCalendar2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jCajaDesde" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCDDiaoTarde" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jCajaHasta" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCDDiaoTarde1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -186,14 +178,15 @@
     <Component class="javax.swing.JComboBox" name="jCajaDesde">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="7">
-            <StringItem index="0" value="4:00"/>
-            <StringItem index="1" value="5:00"/>
-            <StringItem index="2" value="6:00"/>
-            <StringItem index="3" value="7:00"/>
-            <StringItem index="4" value="8:00"/>
-            <StringItem index="5" value="9:00"/>
-            <StringItem index="6" value="10:00"/>
+          <StringArray count="8">
+            <StringItem index="0" value="-"/>
+            <StringItem index="1" value="4:00 AM"/>
+            <StringItem index="2" value="5:00 AM"/>
+            <StringItem index="3" value="6:00 AM"/>
+            <StringItem index="4" value="7:00 AM"/>
+            <StringItem index="5" value="8:00 AM"/>
+            <StringItem index="6" value="9:00 AM"/>
+            <StringItem index="7" value="10:00 AM"/>
           </StringArray>
         </Property>
       </Properties>
@@ -207,49 +200,14 @@
     <Component class="javax.swing.JComboBox" name="jCajaHasta">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="7">
-            <StringItem index="0" value="4:00"/>
-            <StringItem index="1" value="5:00"/>
-            <StringItem index="2" value="6:00"/>
-            <StringItem index="3" value="7:00"/>
-            <StringItem index="4" value="8:00"/>
-            <StringItem index="5" value="9:00"/>
-            <StringItem index="6" value="10:00"/>
+          <StringArray count="1">
+            <StringItem index="0" value="-"/>
           </StringArray>
         </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCajaHastaActionPerformed"/>
       </Events>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jCDDiaoTarde">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="2">
-            <StringItem index="0" value="AM"/>
-            <StringItem index="1" value="PM"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jCDDiaoTardeItemStateChanged"/>
-      </Events>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jCDDiaoTarde1">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="2">
-            <StringItem index="0" value="AM"/>
-            <StringItem index="1" value="PM"/>
-          </StringArray>
-        </Property>
-      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>

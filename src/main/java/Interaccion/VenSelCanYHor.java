@@ -47,8 +47,6 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jCajaDesde = new javax.swing.JComboBox<>();
         jCajaHasta = new javax.swing.JComboBox<>();
-        jCDDiaoTarde = new javax.swing.JComboBox<>();
-        jCDDiaoTarde1 = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         jDescripccionC = new javax.swing.JLabel();
 
@@ -95,28 +93,19 @@ public class VenSelCanYHor extends javax.swing.JFrame {
 
         jLabel3.setText("Hasta:");
 
-        jCajaDesde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4:00", "5:00", "6:00", "7:00", "8:00", "9:00", "10:00" }));
+        jCajaDesde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "4:00 AM", "5:00 AM", "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM" }));
         jCajaDesde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCajaDesdeActionPerformed(evt);
             }
         });
 
-        jCajaHasta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4:00", "5:00", "6:00", "7:00", "8:00", "9:00", "10:00" }));
+        jCajaHasta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         jCajaHasta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCajaHastaActionPerformed(evt);
             }
         });
-
-        jCDDiaoTarde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AM", "PM" }));
-        jCDDiaoTarde.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jCDDiaoTardeItemStateChanged(evt);
-            }
-        });
-
-        jCDDiaoTarde1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AM", "PM" }));
 
         jLabel4.setText("Descripccion: ");
 
@@ -136,7 +125,7 @@ public class VenSelCanYHor extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jOpt1, 0, 112, Short.MAX_VALUE)
+                    .addComponent(jOpt1, 0, 108, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -145,22 +134,18 @@ public class VenSelCanYHor extends javax.swing.JFrame {
                     .addComponent(jDescripccionC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jCalendar2, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jCajaDesde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jCajaHasta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jCDDiaoTarde1, 0, 1, Short.MAX_VALUE)
-                            .addComponent(jCDDiaoTarde, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(33, Short.MAX_VALUE))
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jCajaHasta, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jCalendar2, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(119, 119, 119)
+                            .addComponent(jLabel2)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jCajaDesde, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(37, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(JBoAtras)
@@ -186,16 +171,14 @@ public class VenSelCanYHor extends javax.swing.JFrame {
                         .addGap(0, 103, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jCalendar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(31, 31, 31)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(jCajaDesde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCDDiaoTarde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jCajaDesde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
                             .addComponent(jCajaHasta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCDDiaoTarde1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jBoCancel)
@@ -270,10 +253,6 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jDescripccionCPropertyChange
 
-    private void jCDDiaoTardeItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCDDiaoTardeItemStateChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCDDiaoTardeItemStateChanged
-
     /**
      * @param args the command line arguments
      */
@@ -289,8 +268,6 @@ public class VenSelCanYHor extends javax.swing.JFrame {
     private javax.swing.JButton JBoAtras;
     private javax.swing.JButton JBoSiguente;
     private javax.swing.JButton jBoCancel;
-    private javax.swing.JComboBox<String> jCDDiaoTarde;
-    private javax.swing.JComboBox<String> jCDDiaoTarde1;
     private javax.swing.JComboBox<String> jCajaDesde;
     private javax.swing.JComboBox<String> jCajaHasta;
     private com.toedter.calendar.JCalendar jCalendar2;
