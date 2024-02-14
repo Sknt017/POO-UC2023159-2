@@ -298,6 +298,10 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         //VentanaDatosContacto sec3 = new VentanaDatosContacto();
         //usar instancia calendar para extraer de hor.fechareserva el mes y el año de la variable de tipo Date "fechaReserva"
         //usar hor.fechareserva instead of PickedDate variable
+        int desdeHora = this.jCajaDesde.getSelectedIndex();
+        int hastaHora = this.jCajaHasta.getSelectedIndex();
+        String desdeHoraCB = String.valueOf(this.jCajaDesde.getSelectedItem());
+        String hastaHoraCB = String.valueOf(this.jCajaHasta.getSelectedItem());
         PickedDate = this.jCalendar2.getDate();
         calendar.setTime(PickedDate);
         String Copt = String.valueOf(this.jOpt1.getSelectedItem());
@@ -309,6 +313,7 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         System.out.print("PickedDate day returns..  "+Sdia+" month "+Smes+" anio "+Sanio+" Stage picked... "+Copt);
         //System.out.print(Copt+"\n dia: "+Sdia);
         System.out.println ("\n"+Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)/*cha.getDescripccionCancha()*/));
+        System.out.println("\nPicked Hours: "+desdeHoraCB+" - "+hastaHoraCB);
         int time1 = this.jCajaDesde.getSelectedIndex();
         String pTime1 = String.valueOf(this.jCajaDesde.getSelectedItem());//<---------
         //String Dcan = Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1));
