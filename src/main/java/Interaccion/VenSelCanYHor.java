@@ -94,6 +94,11 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         jLabel3.setText("Hasta:");
 
         jCajaDesde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "4:00 AM", "5:00 AM", "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM" }));
+        jCajaDesde.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCajaDesdeItemStateChanged(evt);
+            }
+        });
         jCajaDesde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCajaDesdeActionPerformed(evt);
@@ -253,6 +258,24 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jDescripccionCPropertyChange
 
+    private void jCajaDesdeItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCajaDesdeItemStateChanged
+        // TODO add your handling code here:
+        //fix filled twice :https://stackoverflow.com/questions/21926397/jcombobox-itemstatechanged-event-called-twice-at-a-time
+        int desdeHora = this.jCajaDesde.getSelectedIndex()+3;
+        int hastaHora = desdeHora+1;
+        System.out.println("item in cb: "+desdeHora+" next hour in cbtill: "+ hastaHora+" : 00");
+//        this.jCajaHasta.addItem(String.valueOf(hastaHora)+" : 00");
+        this.jCajaHasta.removeItemAt(this.jCajaHasta.getItemCount()-1);
+        for(int i=desdeHora;i<13;i++){
+            this.jCajaHasta.addItem(i+1+" : 00 AM");
+            if(i==12){
+                for(int j=1;j<10;j++){
+                this.jCajaHasta.addItem(j+1+" : 00 PM");
+                }
+            }
+        }
+    }//GEN-LAST:event_jCajaDesdeItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -298,7 +321,8 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         //VentanaDatosContacto sec3 = new VentanaDatosContacto();
         //usar instancia calendar para extraer de hor.fechareserva el mes y el año de la variable de tipo Date "fechaReserva"
         //usar hor.fechareserva instead of PickedDate variable
-        int desdeHora = this.jCajaDesde.getSelectedIndex();
+        int desdeHora = this.jCajaDesde.getSelectedIndex()+3;
+        //this.modifyCBEnd();
         int hastaHora = this.jCajaHasta.getSelectedIndex();
         String desdeHoraCB = String.valueOf(this.jCajaDesde.getSelectedItem());
         String hastaHoraCB = String.valueOf(this.jCajaHasta.getSelectedItem());
@@ -313,7 +337,7 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         System.out.print("PickedDate day returns..  "+Sdia+" month "+Smes+" anio "+Sanio+" Stage picked... "+Copt);
         //System.out.print(Copt+"\n dia: "+Sdia);
         System.out.println ("\n"+Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)/*cha.getDescripccionCancha()*/));
-        System.out.println("\nPicked Hours: "+desdeHoraCB+" - "+hastaHoraCB);
+        System.out.println("\nPicked Hours: "+desdeHoraCB+" - "+hastaHoraCB+ "item in cb: "+desdeHora);
         int time1 = this.jCajaDesde.getSelectedIndex();
         String pTime1 = String.valueOf(this.jCajaDesde.getSelectedItem());//<---------
         //String Dcan = Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1));
@@ -348,5 +372,13 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         this.jDescripccionC.setText(sb.toString());
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
 //        }
+    }
+
+    private void modifyCBEnd() {
+        int desdeHora = this.jCajaDesde.getSelectedIndex()+3;
+        int hastaHora = desdeHora+1;
+        System.out.println("item in cb: "+desdeHora+" next hour in cbtill: "+ hastaHora+" : 00");
+        this.jCajaHasta.addItem(String.valueOf(hastaHora)+" : 00");
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
