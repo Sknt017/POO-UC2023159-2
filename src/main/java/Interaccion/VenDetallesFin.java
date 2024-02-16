@@ -13,13 +13,13 @@ public class VenDetallesFin extends javax.swing.JFrame {
      * Creates new form VenDetallesFin
      */
 
-    public VenDetallesFin(String nombreUsuario, String correoElectronicoUsuario, Long numeroContacto1, Long numeroContacto2) {
+    public VenDetallesFin(String[] UserD) {
         initComponents();
         show();
-        String nof = nombreUsuario;
-        String euf = correoElectronicoUsuario; 
-        Long pnf = numeroContacto1;
-        Long pn2f = numeroContacto2;
+        String nof = UserD[0];
+        String euf = UserD[1]; 
+        Long pnf = Long.valueOf(UserD[2]);
+        Long pn2f = Long.valueOf(UserD[3]);
         this.jResumen.append("nombre Usuario: "+nof+"\nCorreo Electronico Registrado: "+euf+"\nnumero de contacto "+pnf+"\notro numero de contacto: "+pn2f);
         this.jResumen.setEditable(false);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

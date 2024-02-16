@@ -23,7 +23,8 @@ public class Usuario {
         this.correoElectronicoUsuario = UEmail;
         this.numeroContacto1 = Tel1;
         this.numeroContacto2 = Tel2;
-        VenDetallesFin sec4 = new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
+        String[] UserD = {NombreU,UEmail,String.valueOf(Tel1),String.valueOf(Tel2)};
+        VenDetallesFin sec4 = new VenDetallesFin(UserD);
         //new VenDetallesFin(nombreUsuario,correoElectronicoUsuario,numeroContacto1,numeroContacto2);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
