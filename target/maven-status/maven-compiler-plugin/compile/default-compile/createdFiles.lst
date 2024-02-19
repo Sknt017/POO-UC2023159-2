@@ -52,7 +52,7 @@ Interaccion\VenProcesoFinError$1.class
 Interaccion\VenProcesoFin.class
 Interaccion\VenCancelReserva$1.class
 Interaccion\VenMetodoPago$1.class
-Procedimientos\Resumir.class
 Interaccion\VenCancelReserva$4.class
 Interaccion\VenSelCanYHor$6.class
 Procedimientos\Usuario.class
+Procedimientos\Reserva.class
