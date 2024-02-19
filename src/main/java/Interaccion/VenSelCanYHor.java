@@ -8,6 +8,7 @@ import java.util.Date;
 import Procedimientos.Canchas;
 import Procedimientos.Horarios;
 import java.awt.Dimension;
+import java.awt.event.ItemEvent;
 import java.util.Arrays;
 import java.util.Calendar;
 import javax.swing.JOptionPane;
@@ -260,20 +261,32 @@ public class VenSelCanYHor extends javax.swing.JFrame {
 
     private void jCajaDesdeItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCajaDesdeItemStateChanged
         // TODO add your handling code here:
-        //fix filled twice :https://stackoverflow.com/questions/21926397/jcombobox-itemstatechanged-event-called-twice-at-a-time
-        int desdeHora = this.jCajaDesde.getSelectedIndex()+3;
-        int hastaHora = desdeHora+1;
-        System.out.println("item in cb: "+desdeHora+" next hour in cbtill: "+ hastaHora+" : 00");
-//        this.jCajaHasta.addItem(String.valueOf(hastaHora)+" : 00");
-        this.jCajaHasta.removeItemAt(this.jCajaHasta.getItemCount()-1);
-        for(int i=desdeHora;i<13;i++){
-            this.jCajaHasta.addItem(i+1+" : 00 AM");
-            if(i==12){
-                for(int j=1;j<10;j++){
-                this.jCajaHasta.addItem(j+1+" : 00 PM");
+        if (evt.getStateChange() == ItemEvent.SELECTED) {
+            System.out.println("Yee");
+        //Do any operations you need to do when an item is selected.
+        } else if(evt.getStateChange() == ItemEvent.DESELECTED){
+        //Do any operations you need to do when an item is de-selected.
+            this.jCajaHasta.removeAllItems();
+            System.out.println("nah");
+            int desdeHora = this.jCajaDesde.getSelectedIndex()+3;
+            int hastaHora = desdeHora+1;
+            System.out.println("item in cb: "+desdeHora+" next hour in cbtill: "+ hastaHora+" : 00 ");
+            //this.jCajaHasta.removeItemAt(this.jCajaHasta.getItemCount()-1);
+            for(int i=desdeHora;i<12;i++){
+                this.jCajaHasta.addItem(i+1+" : 00 AM");
+                if(i==12){
+                    for(int j=1;j<19;j++){
+                    this.jCajaHasta.addItem(j+1+" : 00 PM");
                 }
             }
         }
+
+    }
+        //fix filled twice :https://stackoverflow.com/questions/21926397/jcombobox-itemstatechanged-event-called-twice-at-a-time
+        //this.modifyCBEnd();
+        
+        //        this.jCajaHasta.addItem(String.valueOf(hastaHora)+" : 00");
+        
     }//GEN-LAST:event_jCajaDesdeItemStateChanged
 
     /**
@@ -374,11 +387,18 @@ public class VenSelCanYHor extends javax.swing.JFrame {
 //        }
     }
 
-    private void modifyCBEnd() {
-        int desdeHora = this.jCajaDesde.getSelectedIndex()+3;
-        int hastaHora = desdeHora+1;
-        System.out.println("item in cb: "+desdeHora+" next hour in cbtill: "+ hastaHora+" : 00");
-        this.jCajaHasta.addItem(String.valueOf(hastaHora)+" : 00");
-        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    private void modifyCBEnd(ItemEvent e) {
+        if (e.getStateChange() == ItemEvent.SELECTED) {
+            
+            //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+            //Do any operations you need to do when an item is selected.
+        } else if(e.getStateChange() == ItemEvent.DESELECTED){  
+            int desdeHora = this.jCajaDesde.getSelectedIndex()+3;
+            int hastaHora = desdeHora+1;
+            System.out.println("item in cb: "+desdeHora+" next hour in cbtill: "+ hastaHora+" : 00");
+            this.jCajaHasta.addItem(String.valueOf(hastaHora)+" : 00");
+            //Do any operations you need to do when an item is de-selected.
+        }
+
     }
 }
