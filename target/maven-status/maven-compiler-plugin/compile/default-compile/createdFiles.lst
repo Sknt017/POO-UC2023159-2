@@ -6,7 +6,6 @@ Reservas\Solicitudes.class
 Reservas\Resumen.class
 Interaccion\JDlogpgNeq$1.class
 Interaccion\VenMetodoPago$2.class
-Interaccion\VenMetodoPago$10.class
 Interaccion\VentanaInicio.class
 Interaccion\VenCancelReserva$2.class
 Interaccion\VenDetallesFin$1.class

@@ -7,6 +7,7 @@ package Interaccion;
 import java.util.Date;
 import Procedimientos.Canchas;
 import Procedimientos.Horarios;
+import Procedimientos.Reserva;
 import java.awt.Dimension;
 import java.awt.event.ItemEvent;
 import java.util.Arrays;
@@ -355,8 +356,9 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         String pTime1 = String.valueOf(this.jCajaDesde.getSelectedItem());//<---------
         //String Dcan = Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1));
         //new Canchas(hor.fechaReserva,Copt);
-        System.out.print("Pricked time: "+pTime1+" "+ time1);
+        System.out.print("Picked time: "+pTime1+" "+ time1);
         Horarios ho = new Horarios(Sdia,Smes,Sanio);
+        Reserva UR = new Reserva(desdeHoraCB,hastaHoraCB,Sdia,Smes,Sanio,Copt);
         //sec3.show();
         dispose();
         }
