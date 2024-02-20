@@ -21,9 +21,9 @@ public class VenMetodoPago extends javax.swing.JFrame {
         initComponents();
         this.jBotPagEfe3.setEnabled(false);
         this.jBotPagNeq.setEnabled(false);
-        this.jTextField1.setEditable(false);
-        this.jTextField2.setEditable(false);
-        this.jTextField3.setEditable(false);
+        this.CCnum.setEditable(false);
+        this.nameCC.setEditable(false);
+        this.jCCV.setEditable(false);
     }
 
     /**
@@ -41,13 +41,14 @@ public class VenMetodoPago extends javax.swing.JFrame {
         jBotPagEfe3 = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        CCnum = new javax.swing.JTextField();
+        nameCC = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         JcSiguiente = new javax.swing.JToggleButton();
+        jLabel5 = new javax.swing.JLabel();
+        jCCV = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(480, 390));
@@ -96,15 +97,9 @@ public class VenMetodoPago extends javax.swing.JFrame {
 
         jLabel1.setText("Seleccionar Metodo Pago:");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        CCnum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                CCnumActionPerformed(evt);
             }
         });
 
@@ -121,6 +116,8 @@ public class VenMetodoPago extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setText("datafono...");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -129,7 +126,11 @@ public class VenMetodoPago extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(46, 46, 46)
+                                .addComponent(jLabel5)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -137,9 +138,9 @@ public class VenMetodoPago extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jCCV, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jTextField1)
+                                        .addComponent(CCnum)
                                         .addComponent(jComboBox1, 0, 270, Short.MAX_VALUE)))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -161,9 +162,9 @@ public class VenMetodoPago extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(nameCC, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel2))
-                        .addContainerGap())))
+                        .addContainerGap(275, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,18 +175,19 @@ public class VenMetodoPago extends javax.swing.JFrame {
                     .addComponent(jLabel1))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CCnum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nameCC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabel4)
+                    .addComponent(jCCV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(60, 60, 60)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBotPagNeq, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBotPagEfe3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBotPagEfe3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
@@ -217,18 +219,14 @@ public class VenMetodoPago extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jBotPagEfe3ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
     private void JcSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JcSiguienteActionPerformed
         // TODO add your handling code here:
         this.siguiente();
     }//GEN-LAST:event_JcSiguienteActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void CCnumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CCnumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_CCnumActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
@@ -251,19 +249,20 @@ public class VenMetodoPago extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField CCnum;
     private javax.swing.JToggleButton JcSiguiente;
     private javax.swing.JButton jBotPagEfe3;
     private javax.swing.JButton jBotPagNeq;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JTextField jCCV;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField nameCC;
     // End of variables declaration//GEN-END:variables
 
     private void pneq() {
@@ -283,6 +282,13 @@ public class VenMetodoPago extends javax.swing.JFrame {
 
     private void siguiente() {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Long NCC = Long.valueOf(this.CCnum.getText());
+        System.out.print("CCNum: "+ NCC +"\n");
+        String nameTCC = this.nameCC.getText();
+        System.out.print("CCName: "+ nameTCC +"\n");
+        //char[] CCV = this.jCCV.getPassword();
+        int CCV = Integer.parseInt(this.jCCV.getText());
+        System.out.print("CCV: "+ CCV +"\n");
         VenDetallesFin s = new VenDetallesFin();
         s.show();
         dispose();
@@ -294,38 +300,41 @@ public class VenMetodoPago extends javax.swing.JFrame {
             case 0 ->{
                 this.jBotPagEfe3.setEnabled(false);
                 this.jBotPagNeq.setEnabled(false);
-                this.jTextField1.setEditable(false);
-                this.jTextField2.setEditable(false);
-                this.jTextField3.setEditable(false);
+                this.CCnum.setEditable(false);
+                this.nameCC.setEditable(false);
+                this.jCCV.setEditable(false);
             }
             case 1 ->{
-                this.jTextField1.setEditable(true);
-                this.jTextField2.setEditable(true);
-                this.jTextField3.setEditable(true);
+                this.CCnum.setEditable(true);
+                this.nameCC.setEditable(true);
+                this.jCCV.setEditable(true);
                 this.jBotPagEfe3.setEnabled(false);
                 this.jBotPagNeq.setEnabled(false);
             }
             case 2 ->{
-                this.jTextField1.setEditable(true);
-                this.jTextField2.setEditable(true);
-                this.jTextField3.setEditable(true);
+                this.CCnum.setEditable(true);
+                this.nameCC.setEditable(true);
+                this.jCCV.setEditable(true);
                 this.jBotPagEfe3.setEnabled(false);
                 this.jBotPagNeq.setEnabled(false);
             }
             case 3 ->{
                 this.jBotPagEfe3.setEnabled(true);
-                this.jTextField1.setEditable(false);
-                this.jTextField2.setEditable(false);
-                this.jTextField3.setEditable(false);
+                this.CCnum.setEditable(false);
+                this.nameCC.setEditable(false);
+                this.jCCV.setEditable(false);
                 this.jBotPagNeq.setEnabled(false);
             }
             case 4 ->{
                 this.jBotPagNeq.setEnabled(true);
-                this.jTextField1.setEditable(false);
-                this.jTextField2.setEditable(false);
-                this.jTextField3.setEditable(false);
+                this.CCnum.setEditable(false);
+                this.nameCC.setEditable(false);
+                this.jCCV.setEditable(false);
                 this.jBotPagEfe3.setEnabled(false);
             }
+
+
+
             
             
         }
