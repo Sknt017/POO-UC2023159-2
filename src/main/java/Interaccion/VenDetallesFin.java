@@ -12,14 +12,16 @@ public class VenDetallesFin extends javax.swing.JFrame {
     /**
      * Creates new form VenDetallesFin
      */
-
+    String nof,euf;
+    Long pnf,pn2f;
+            
     public VenDetallesFin(String[] UserD) {
         initComponents();
         show();
-        String nof = UserD[0];
-        String euf = UserD[1]; 
-        Long pnf = Long.valueOf(UserD[2]);
-        Long pn2f = Long.valueOf(UserD[3]);
+        nof = UserD[0];
+        euf = UserD[1]; 
+        pnf = Long.valueOf(UserD[2]);
+        pn2f = Long.valueOf(UserD[3]);
         this.jResumen.append("nombre Usuario: "+nof+"\nCorreo Electronico Registrado: "+euf+"\nnumero de contacto "+pnf+"\notro numero de contacto: "+pn2f);
         this.jResumen.setEditable(false);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
@@ -151,7 +153,17 @@ public class VenDetallesFin extends javax.swing.JFrame {
         VenMetodoPago vp = new VenMetodoPago();
         vp.setVisible(true);
         this.dispose();
+        System.out.print(nof);
+        System.out.print(euf);
+        System.out.print(pnf);
+        System.out.print(pn2f);
     }
     private void irADatosContacto() {
+        VenDetallesFin vdf = new VenDetallesFin();
+        //vdf.
+        System.out.print(nof);
+        System.out.print(euf);
+        System.out.print(pnf);
+        System.out.print(pn2f);
     }
 }

@@ -14,6 +14,9 @@ import java.util.Date;
 public class Horarios {
     // desplegar los datos recibidos del jframe form venselcanyhor aca
     // realizar lo mismo en canchas.java
+    //***********************************************************************************
+    //esta clase es para verififcar que la franja horaria seleccionada se encuentre disponible para reservar.
+    //si no es asi devolvera un error para cambiar las horas de reservacion
     public Date fechaReserva;
     public int horasReserva;
     public Horarios(int Sdia, int Smes, int Sanio) {
@@ -21,7 +24,7 @@ public class Horarios {
         int Pmes = Smes;
         int Panio = Sanio;
         int[] Fsel={Pdia,Pmes,Panio};
-        VentanaDatosContacto sec3 = new VentanaDatosContacto(Fsel);
+        //VentanaDatosContacto sec3 = new VentanaDatosContacto(Fsel);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public Date obtenerFechasReserva(){
