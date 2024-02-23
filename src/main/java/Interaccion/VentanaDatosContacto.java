@@ -4,21 +4,15 @@
  */
 package Interaccion;
 import Procedimientos.Usuario;
-import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-
 /**
  *
  * @author dasan
  */
 public class VentanaDatosContacto extends javax.swing.JFrame {
-    //public String NombreU;
-    //public String UEmail;
-    //public int Tel1;
-    //public int Tel2;
+        String HRrvc,HRrvcF,dR,mR,aR;
 
     /**
      * Creates new form VentanaDatosContacto
@@ -27,11 +21,13 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         initComponents();
     }
 
-    public VentanaDatosContacto(int[] Fsel) {
-        show();
-        initComponents();
-        int[] FeD = Fsel;
-        System.out.print(Arrays.toString(FeD));
+    public VentanaDatosContacto(String[] ResF) {
+        HRrvc = ResF[0];
+        HRrvcF = ResF[1];
+        dR = ResF[2];
+        mR = ResF[3];
+        aR = ResF[4];
+        System.out.print("Hora reservada: " + HRrvc + "\n hasta las: "+ HRrvcF+"\ndel: "+ dR+" del mes no."+mR+" del: "+aR);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

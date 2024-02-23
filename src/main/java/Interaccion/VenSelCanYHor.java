@@ -344,11 +344,11 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         calendar.setTime(PickedDate);
         String Copt = String.valueOf(this.jOpt1.getSelectedItem());
         //System.out.print(hor.fechaReserva+"\n");
-        System.out.print("Picked option: "+String.valueOf(SelCan));
+        System.out.print("\nPicked option: "+String.valueOf(SelCan));
         Sdia = calendar.get(Calendar.DATE);
         Smes = calendar.get(Calendar.MONTH);
         Sanio = calendar.get(Calendar.YEAR);
-        System.out.print("PickedDate day returns..  "+Sdia+" month "+Smes+" anio "+Sanio+" Stage picked... "+Copt);
+        System.out.print("\nPickedDate day returns..  "+Sdia+" month "+Smes+" anio "+Sanio+" Stage picked... "+Copt);
         //System.out.print(Copt+"\n dia: "+Sdia);
         System.out.println ("\n"+Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)/*cha.getDescripccionCancha()*/));
         System.out.println("\nPicked Hours: "+desdeHoraCB+" - "+hastaHoraCB+ "item in cb: "+desdeHora);
@@ -357,6 +357,7 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         //String Dcan = Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1));
         //new Canchas(hor.fechaReserva,Copt);
         System.out.print("Picked time: "+pTime1+" "+ time1);
+        System.out.print("\n end of outputs in class canchaHorario\n");
         Horarios ho = new Horarios(Sdia,Smes,Sanio);
         Reserva UR = new Reserva(desdeHoraCB,hastaHoraCB,Sdia,Smes,Sanio,Copt);
         //sec3.show();
