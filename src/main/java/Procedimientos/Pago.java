@@ -9,6 +9,7 @@ package Procedimientos;
  * @author dasan
  */
 public class Pago {
+    //recibir, encapsular, almacenar.
     
     public int CCNumero;
     public String titularCC;

@@ -24,6 +24,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
         this.CCnum.setEditable(false);
         this.nameCC.setEditable(false);
         this.jCCV.setEditable(false);
+        this.JcSiguiente.setEnabled(false);
     }
 
     /**
@@ -303,6 +304,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
                 this.CCnum.setEditable(false);
                 this.nameCC.setEditable(false);
                 this.jCCV.setEditable(false);
+                this.JcSiguiente.setEnabled(false);
             }
             case 1 ->{
                 this.CCnum.setEditable(true);
@@ -310,6 +312,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
                 this.jCCV.setEditable(true);
                 this.jBotPagEfe3.setEnabled(false);
                 this.jBotPagNeq.setEnabled(false);
+                this.JcSiguiente.setEnabled(true);
             }
             case 2 ->{
                 this.CCnum.setEditable(true);
@@ -317,6 +320,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
                 this.jCCV.setEditable(true);
                 this.jBotPagEfe3.setEnabled(false);
                 this.jBotPagNeq.setEnabled(false);
+                this.JcSiguiente.setEnabled(true);
             }
             case 3 ->{
                 this.jBotPagEfe3.setEnabled(true);
@@ -324,6 +328,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
                 this.nameCC.setEditable(false);
                 this.jCCV.setEditable(false);
                 this.jBotPagNeq.setEnabled(false);
+                this.JcSiguiente.setEnabled(true);
             }
             case 4 ->{
                 this.jBotPagNeq.setEnabled(true);
@@ -331,6 +336,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
                 this.nameCC.setEditable(false);
                 this.jCCV.setEditable(false);
                 this.jBotPagEfe3.setEnabled(false);
+                this.JcSiguiente.setEnabled(true);
             }
 
 

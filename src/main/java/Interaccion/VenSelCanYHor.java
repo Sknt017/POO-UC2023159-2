@@ -332,9 +332,11 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         Date PickedDate; int Sdia,Smes,Sanio;
         Canchas cha = new Canchas();
         Calendar calendar = Calendar.getInstance();
-        //VentanaDatosContacto sec3 = new VentanaDatosContacto();
-        //usar instancia calendar para extraer de hor.fechareserva el mes y el año de la variable de tipo Date "fechaReserva"
-        //usar hor.fechareserva instead of PickedDate variable
+        //[DONE]usar instancia calendar para extraer de hor.fechareserva el mes y el año de la variable de tipo Date "fechaReserva"
+        //[DONE]usar hor.fechareserva instead of PickedDate variable
+        
+        //!!!make the form to check if the picked date for the reservation is a valid date.!!!
+        
         int desdeHora = this.jCajaDesde.getSelectedIndex()+3;
         //this.modifyCBEnd();
         int hastaHora = this.jCajaHasta.getSelectedIndex();
