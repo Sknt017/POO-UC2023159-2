@@ -9,11 +9,38 @@ package Procedimientos;
  * @author dasan
  */
 public class Pago {
-    //recibir, encapsular, almacenar.
+    //recibir, encapsular_/, almacenar.
     
-    public int CCNumero;
-    public String titularCC;
-    public int CCV;
+    private int CCNumero;
+    private String titularCC;
+    private int CCV;
+
+    public int getCCNumero() {
+        return CCNumero;
+    }
+
+    public void setCCNumero(int CCNumero) {
+        this.CCNumero = CCNumero;
+    }
+
+    public String getTitularCC() {
+        return titularCC;
+    }
+
+    public void setTitularCC(String titularCC) {
+        this.titularCC = titularCC;
+    }
+
+    public int getCCV() {
+        return CCV;
+    }
+
+    public void setCCV(int CCV) {
+        this.CCV = CCV;
+    }
+    
+    
+    
     public void registrarDatosPago(){
         
     }
