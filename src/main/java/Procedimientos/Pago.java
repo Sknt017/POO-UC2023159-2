@@ -8,18 +8,23 @@ package Procedimientos;
  *
  * @author dasan
  */
-public class Pago {
+public final class Pago {
     //recibir, encapsular_/, almacenar.
-    
-    private int CCNumero;
+    private Long CCNumero;
     private String titularCC;
     private int CCV;
 
-    public int getCCNumero() {
+    public Pago(Long NCC, String nameTCC, int CCV) {
+        this.setCCNumero(NCC);
+        System.out.print("in pay class...\n "+CCNumero);
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Long getCCNumero() {
         return CCNumero;
     }
 
-    public void setCCNumero(int CCNumero) {
+    public void setCCNumero(Long CCNumero) {
         this.CCNumero = CCNumero;
     }
 

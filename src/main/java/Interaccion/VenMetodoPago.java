@@ -4,6 +4,7 @@
  */
 package Interaccion;
 
+import Procedimientos.Pago;
 import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -290,6 +291,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
         //char[] CCV = this.jCCV.getPassword();
         int CCV = Integer.parseInt(this.jCCV.getText());
         System.out.print("CCV: "+ CCV +"\n");
+        Pago p = new Pago(NCC,nameTCC,CCV);
         VenDetallesFin s = new VenDetallesFin();
         s.show();
         dispose();
