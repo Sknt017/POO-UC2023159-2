@@ -4,6 +4,8 @@
  */
 package Interaccion;
 
+import Procedimientos.Referencias;
+
 /**
  *
  * @author dasan
@@ -16,13 +18,15 @@ public class VenDetallesFin extends javax.swing.JFrame {
     Long pnf,pn2f;
             
     public VenDetallesFin(String[] UserD) {
+        Referencias re = new Referencias();
+        String Ref = re.generarReferencia();
         initComponents();
         show();
         nof = UserD[0];
         euf = UserD[1]; 
         pnf = Long.valueOf(UserD[2]);
         pn2f = Long.valueOf(UserD[3]);
-        this.jResumen.append("nombre Usuario: "+nof+"\nCorreo Electronico Registrado: "+euf+"\nnumero de contacto "+pnf+"\notro numero de contacto: "+pn2f);
+        this.jResumen.append("nombre Usuario: "+nof+"\nCorreo Electronico Registrado: "+euf+"\nnumero de contacto "+pnf+"\notro numero de contacto: "+pn2f+"\nNo. Reservacion: "+Ref);
         this.jResumen.setEditable(false);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }

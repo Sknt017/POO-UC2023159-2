@@ -13,26 +13,36 @@ import java.util.Random;
  * @author dasan
  */
 public class Referencias {
-    
-    public static void main(String[]args){
-        int number;
-        ArrayList<String> numRF = new ArrayList<>();
-        Random random = new Random();
-        for(int i=0;i<10;i++){
-            number = random.nextInt(10);
-//            System.out.println(number);
-            numRF.add(String.valueOf(number));
-        }
-        //System.out.println(numRF);
-        //String RID = TextUtils.join(", ", List);
-        String listString = String.join("-",numRF);
-        System.out.println(listString);
-    }
+    StringBuilder ro = new StringBuilder();
+    int number;
+    ArrayList<String> numRF = new ArrayList<>();
+    Random random = new Random();
+//    public static void main(String[]args){
+//        StringBuilder ro = new StringBuilder();
+//        int number;
+//        ArrayList<String> numRF = new ArrayList<>();
+//        Random random = new Random();
+//        for(int i=0;i<5;i++){
+//            number = random.nextInt(5);
+//            numRF.add(String.valueOf(number));
+//            ro.append(String.valueOf(numRF.get(i)));
+//        }
+//        String RID = ro.toString();
+//        String listString = String.join("-",numRF);
+//        System.out.println(listString+"..."+RID);
+//    }
     public void obtenerReferencia(int Refe){
         
     }
-    public int generarReferencia(){
-        return 0;
+    public String generarReferencia(){
+        for(int i=0;i<5;i++){
+            number = random.nextInt(5);
+            numRF.add(String.valueOf(number));
+            ro.append(String.valueOf(numRF.get(i)));
+        }
+        String RID = ro.toString();
+        String listString = String.join("-",numRF);
+        System.out.println(listString+"..."+RID);
+        return RID;
     }
-    
 }
