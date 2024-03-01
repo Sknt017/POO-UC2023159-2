@@ -12,10 +12,12 @@ public final class Pago {
     //recibir, encapsular_/, almacenar.
     private Long CCNumero;
     private String titularCC;
-    private int CCV;
+    private int cCCV;
 
     public Pago(Long NCC, String nameTCC, int CCV) {
-        this.setCCNumero(NCC);
+        CCNumero = NCC;
+        titularCC = nameTCC;
+        cCCV = CCV;
         System.out.print("in pay class...\n "+CCNumero);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
@@ -37,11 +39,11 @@ public final class Pago {
     }
 
     public int getCCV() {
-        return CCV;
+        return cCCV;
     }
 
     public void setCCV(int CCV) {
-        this.CCV = CCV;
+        this.cCCV = CCV;
     }
     
     

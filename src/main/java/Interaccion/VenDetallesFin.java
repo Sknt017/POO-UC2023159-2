@@ -5,6 +5,8 @@
 package Interaccion;
 
 import Procedimientos.Referencias;
+import Procedimientos.Reserva;
+import java.util.Arrays;
 
 /**
  *
@@ -16,8 +18,14 @@ public class VenDetallesFin extends javax.swing.JFrame {
      */
     String nof,euf;
     Long pnf,pn2f;
+    String[] ReservationF;
             
-    public VenDetallesFin(String[] UserD) {
+    /**
+     *
+     * @param UserD
+     */
+    public VenDetallesFin(String[] UserD, String[] ReseF) {
+        //!!!!!show stage reservation on the textarea
         Referencias re = new Referencias();
         String Ref = re.generarReferencia();
         initComponents();
@@ -27,6 +35,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
         pnf = Long.valueOf(UserD[2]);
         pn2f = Long.valueOf(UserD[3]);
         this.jResumen.append("nombre Usuario: "+nof+"\nCorreo Electronico Registrado: "+euf+"\nnumero de contacto "+pnf+"\notro numero de contacto: "+pn2f+"\nNo. Reservacion: "+Ref);
+        System.out.println(Arrays.toString(ReseF));
         this.jResumen.setEditable(false);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }

@@ -4,6 +4,7 @@
  */
 package Interaccion;
 import Procedimientos.Usuario;
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
@@ -13,15 +14,19 @@ import javax.swing.JOptionPane;
  */
 public class VentanaDatosContacto extends javax.swing.JFrame {
         String HRrvc,HRrvcF,dR,mR,aR;
+        String[] ReseF;
 
     /**
      * Creates new form VentanaDatosContacto
      */
     public VentanaDatosContacto() {
-        initComponents();
+        //initComponents();
     }
 
     public VentanaDatosContacto(String[] ResF) {
+        initComponents();
+        show();
+        ReseF = ResF;
         HRrvc = ResF[0];
         HRrvcF = ResF[1];
         dR = ResF[2];
@@ -223,8 +228,8 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
             }
             Long Tel1 = Long.valueOf(this.jcont1.getText());//switch to long so it recieves actual phone numbers
             Long Tel2 = Long.valueOf(this.jCont2.getText());
-            //VenDetallesFin sec4 = new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
-            Usuario du = new Usuario (NombreU,UEmail,Tel1,Tel2);
+            //VenDetallesFin sec4 = new VenDetallesFin(ReseF);
+            Usuario du = new Usuario (NombreU,UEmail,Tel1,Tel2,ReseF);
             //new VenDetallesFin();
             //sec4.show();
             //VenMetodoPago sec4 = new VenMetodoPago();
@@ -233,6 +238,7 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         }catch(NumberFormatException e){
             //System.out.print(e.getMessage());
             var b = JOptionPane.showConfirmDialog(rootPane, "Validar numeros registrados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+            //System.out.print(Arrays.toString(ReseF));
         }catch(IllegalArgumentException e){
             var b = JOptionPane.showConfirmDialog(rootPane, "Validar Correo electronico registrado", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
         }

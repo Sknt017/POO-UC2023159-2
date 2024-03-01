@@ -19,12 +19,16 @@ public class Usuario {
     private Long numeroContacto2;
 
     public Usuario(String NombreU, String UEmail, Long Tel1, Long Tel2) {
+        //this(NombreU, UEmail, Tel1, Tel2, ReseF);
+    }
+
+    public Usuario(String NombreU, String UEmail, Long Tel1, Long Tel2, String[] ReseF) {
         this.nombreUsuario = NombreU;
         this.correoElectronicoUsuario = UEmail;
         this.numeroContacto1 = Tel1;
         this.numeroContacto2 = Tel2;
-        String[] UserD = {NombreU,UEmail,String.valueOf(Tel1),String.valueOf(Tel2)};
-        VenDetallesFin sec4 = new VenDetallesFin(UserD);
+        String[] UserD = {NombreU, UEmail, String.valueOf(Tel1), String.valueOf(Tel2)};
+        VenDetallesFin sec4 =   new VenDetallesFin(UserD,ReseF);
         //new VenDetallesFin(nombreUsuario,correoElectronicoUsuario,numeroContacto1,numeroContacto2);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
