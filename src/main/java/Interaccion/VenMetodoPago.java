@@ -5,7 +5,6 @@
 package Interaccion;
 
 import Procedimientos.Pago;
-import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
