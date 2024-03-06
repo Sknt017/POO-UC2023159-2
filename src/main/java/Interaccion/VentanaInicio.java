@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -118,6 +118,7 @@ public class VentanaInicio extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void realizarReserva() {
+	//perf upt
         VenSelCanYHor sec2 = new VenSelCanYHor();
         sec2.show();
         dispose();    
