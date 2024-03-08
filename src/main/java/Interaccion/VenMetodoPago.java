@@ -5,6 +5,7 @@
 package Interaccion;
 
 import Procedimientos.Pago;
+import java.util.Arrays;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -25,6 +26,11 @@ public class VenMetodoPago extends javax.swing.JFrame {
         this.nameCC.setEditable(false);
         this.jCCV.setEditable(false);
         this.JcSiguiente.setEnabled(false);
+    }
+
+    public VenMetodoPago(String[] UserD, String[] ReseF) {
+        System.out.println(Arrays.toString(UserD)+"\n"+Arrays.toString(ReseF));
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**

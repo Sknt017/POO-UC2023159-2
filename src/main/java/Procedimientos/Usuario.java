@@ -5,6 +5,7 @@
 package Procedimientos;
 
 import Interaccion.VenDetallesFin;
+import Interaccion.VenMetodoPago;
 import Interaccion.VentanaDatosContacto;
 
 /**
@@ -29,6 +30,7 @@ public class Usuario {
         this.numeroContacto2 = Tel2;
         String[] UserD = {NombreU, UEmail, String.valueOf(Tel1), String.valueOf(Tel2)};
         VenDetallesFin sec4 =   new VenDetallesFin(UserD,ReseF);
+        VenMetodoPago sli5 =   new VenMetodoPago(UserD,ReseF);
         //new VenDetallesFin(nombreUsuario,correoElectronicoUsuario,numeroContacto1,numeroContacto2);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
