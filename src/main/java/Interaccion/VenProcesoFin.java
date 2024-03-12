@@ -4,6 +4,8 @@
  */
 package Interaccion;
 
+import Procedimientos.Referencias;
+
 /**
  *
  * @author dasan
@@ -15,6 +17,9 @@ public class VenProcesoFin extends javax.swing.JFrame {
      */
     public VenProcesoFin() {
         initComponents();
+        Referencias re = new Referencias(); //this better be called at the end of all the forms
+        String Ref = re.generarReferencia();
+        this.JReservaNo.setText(Ref);
     }
 
     /**
@@ -29,6 +34,8 @@ public class VenProcesoFin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        JReservaNo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,27 +55,38 @@ public class VenProcesoFin extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setText("Numero de reserva: ");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(166, 166, 166)
-                .addComponent(jLabel1)
-                .addContainerGap(27, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(166, 166, 166)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(JReservaNo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel1))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 219, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(JReservaNo, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 185, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3))
@@ -124,9 +142,11 @@ public class VenProcesoFin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel JReservaNo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 
     private void newR() {
