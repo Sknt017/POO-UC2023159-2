@@ -27,6 +27,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
     public VenDetallesFin(String[] UserD, String[] ReseF) {
         //Referencias re = new Referencias(); this better be called at the end of all the forms
         //String Ref = re.generarReferencia(); 
+        //next slide doesnt show
         initComponents();
         show();
         nof = UserD[0];
