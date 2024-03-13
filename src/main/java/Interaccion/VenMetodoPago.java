@@ -18,18 +18,29 @@ public class VenMetodoPago extends javax.swing.JFrame {
     /**
      * Creates new form VenMetodoPago
      */
+    String[] UserDP,ReseFP;
     public VenMetodoPago() {
+//        initComponents();
+//        this.jBotPagEfe3.setEnabled(false);
+//        this.jBotPagNeq.setEnabled(false);
+//        this.CCnum.setEditable(false);
+//        this.nameCC.setEditable(false);
+//        this.jCCV.setEditable(false);
+//        this.JcSiguiente.setEnabled(false);
+    }
+
+    public VenMetodoPago(String[] UserD, String[] ReseF) {
+        System.out.println(Arrays.toString(UserD)+"\n"+Arrays.toString(ReseF));
         initComponents();
+        show();
         this.jBotPagEfe3.setEnabled(false);
         this.jBotPagNeq.setEnabled(false);
         this.CCnum.setEditable(false);
         this.nameCC.setEditable(false);
         this.jCCV.setEditable(false);
         this.JcSiguiente.setEnabled(false);
-    }
-
-    public VenMetodoPago(String[] UserD, String[] ReseF) {
-        System.out.println(Arrays.toString(UserD)+"\n"+Arrays.toString(ReseF));
+        UserDP = UserD;
+        ReseFP = ReseF;
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -296,9 +307,8 @@ public class VenMetodoPago extends javax.swing.JFrame {
         //char[] CCV = this.jCCV.getPassword();
         int CCV = Integer.parseInt(this.jCCV.getText());
         System.out.print("CCV: "+ CCV +"\n");
-        Pago p = new Pago(NCC,nameTCC,CCV);
+        Pago p = new Pago(NCC,nameTCC,CCV,UserDP,ReseFP);
         VenDetallesFin s = new VenDetallesFin();
-        s.show();
         dispose();
     }
 

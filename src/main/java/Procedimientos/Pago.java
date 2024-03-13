@@ -4,6 +4,8 @@
  */
 package Procedimientos;
 
+import Interaccion.VenDetallesFin;
+
 /**
  *
  * @author dasan
@@ -14,11 +16,12 @@ public final class Pago {
     private String titularCC;
     private int cCCV;
 
-    public Pago(Long NCC, String nameTCC, int CCV) {
+    public Pago(Long NCC, String nameTCC, int CCV, String[] UserDP, String[] ReseFP) {
         CCNumero = NCC;
         titularCC = nameTCC;
         cCCV = CCV;
-        System.out.print("in pay class...\n "+CCNumero);
+        //System.out.print("in pay class...\n "+CCNumero);
+        VenDetallesFin sec4 =   new VenDetallesFin(UserDP,ReseFP);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
