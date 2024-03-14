@@ -340,10 +340,13 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         Smes = calendar.get(Calendar.MONTH);
         Sanio = calendar.get(Calendar.YEAR);
         System.out.print("\nPicked option: "+String.valueOf(SelCan));
-        if(SelCan==0||this.dateCheck(Sdia,Smes,Sanio)==false){
+        if(SelCan==0||this.dateCheck(Sdia,Smes,Sanio)==false||this.dateCheck()==false){
             //throw new IllegalArgumentException("Please select a field.");
+            if(this.dateCheck()==false){
+                var b = JOptionPane.showConfirmDialog(rootPane, "Elegir una hora diferente", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+            }
             if(SelCan==0){
-            var b = JOptionPane.showConfirmDialog(rootPane, "Favor Seleccionar una cancha", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+                var b = JOptionPane.showConfirmDialog(rootPane, "Favor Seleccionar una cancha", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             }
         }else{
         //[DONE]usar instancia calendar para extraer de hor.fechareserva el mes y el año de la variable de tipo Date "fechaReserva"
@@ -432,6 +435,12 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         } else {
         return true;
         }
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private boolean dateCheck() {
+        String timePicked = (String) this.jCajaDesde.getSelectedItem();
+        return !"-".equals(timePicked);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
