@@ -275,8 +275,8 @@ public class VenSelCanYHor extends javax.swing.JFrame {
             //this.jCajaHasta.removeItemAt(this.jCajaHasta.getItemCount()-1);
             for(int i=desdeHora;i<12;i++){
                 this.jCajaHasta.addItem(i+1+":00 AM");
-                if(i==12){
-                    for(int j=1;j<19;j++){
+                if(i==11){
+                    for(int j=1;j<9;j++){
                     this.jCajaHasta.addItem(j+1+":00 PM");
                 }
             }
@@ -342,11 +342,10 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         System.out.print("\nPicked option: "+String.valueOf(SelCan));
         if(SelCan==0||this.dateCheck(Sdia,Smes,Sanio)==false||this.dateCheck()==false){
             //throw new IllegalArgumentException("Please select a field.");
-            if(this.dateCheck()==false){
-                var b = JOptionPane.showConfirmDialog(rootPane, "Elegir una hora diferente", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
-            }
             if(SelCan==0){
                 var b = JOptionPane.showConfirmDialog(rootPane, "Favor Seleccionar una cancha", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+            }else if(this.dateCheck()==false&&this.dateCheck(Sdia,Smes,Sanio)==true){
+                var b = JOptionPane.showConfirmDialog(rootPane, "Elegir una hora diferente", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             }
         }else{
         //[DONE]usar instancia calendar para extraer de hor.fechareserva el mes y el año de la variable de tipo Date "fechaReserva"
@@ -413,7 +412,6 @@ public class VenSelCanYHor extends javax.swing.JFrame {
     }
 
     private boolean dateCheck(int Sdia, int Smes, int Sanio) {
-        
         Date now = new Date();
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(now);

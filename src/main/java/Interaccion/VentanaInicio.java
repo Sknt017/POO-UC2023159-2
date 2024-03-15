@@ -120,8 +120,8 @@ public class VentanaInicio extends javax.swing.JFrame {
     private void realizarReserva() {
 	//perf upt
         VenSelCanYHor sec2 = new VenSelCanYHor();
-        sec2.show();
         dispose();    
+        sec2.show();
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
