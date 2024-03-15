@@ -20,13 +20,13 @@ public class VenMetodoPago extends javax.swing.JFrame {
      */
     String[] UserDP,ReseFP;
     public VenMetodoPago() {
-//        initComponents();
-//        this.jBotPagEfe3.setEnabled(false);
-//        this.jBotPagNeq.setEnabled(false);
-//        this.CCnum.setEditable(false);
-//        this.nameCC.setEditable(false);
-//        this.jCCV.setEditable(false);
-//        this.JcSiguiente.setEnabled(false);
+        initComponents();
+        this.jBotPagEfe3.setEnabled(false);
+        this.jBotPagNeq.setEnabled(false);
+        this.CCnum.setEditable(false);
+        this.nameCC.setEditable(false);
+        this.jCCV.setEditable(false);
+        this.JcSiguiente.setEnabled(false);
     }
 
     public VenMetodoPago(String[] UserD, String[] ReseF) {
@@ -287,11 +287,10 @@ public class VenMetodoPago extends javax.swing.JFrame {
         ImageIcon icon = new ImageIcon("src/qrneq.png");
         //JOptionPane.showConfirmDialog(JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE,icon);
         int a= JOptionPane.showConfirmDialog(this, "mostrar factura en caja", "Pago Nequi", JOptionPane.CLOSED_OPTION , JOptionPane.PLAIN_MESSAGE, icon);
-
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    private void atras() {
+    private void atras(){
         VentanaDatosContacto VNC = new VentanaDatosContacto();
         VNC.show();
         dispose();
@@ -300,16 +299,26 @@ public class VenMetodoPago extends javax.swing.JFrame {
 
     private void siguiente() {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        Long NCC = Long.valueOf(this.CCnum.getText());
-        System.out.print("CCNum: "+ NCC +"\n");
-        String nameTCC = this.nameCC.getText();
-        System.out.print("CCName: "+ nameTCC +"\n");
-        //char[] CCV = this.jCCV.getPassword();
-        int CCV = Integer.parseInt(this.jCCV.getText());
-        System.out.print("CCV: "+ CCV +"\n");
-        Pago p = new Pago(NCC,nameTCC,CCV,UserDP,ReseFP);
+        if(this.jComboBox1.getSelectedIndex()==1||this.jComboBox1.getSelectedIndex()==2){
+            try{
+                Long NCC = Long.valueOf(this.CCnum.getText());
+                System.out.print("CCNum: "+ NCC +"\n");
+                String nameTCC = this.nameCC.getText();
+                System.out.print("CCName: "+ nameTCC +"\n");
+                //char[] CCV = this.jCCV.getPassword();
+                int CCV = Integer.parseInt(this.jCCV.getText());
+                System.out.print("CCV: "+ CCV +"\n");
+                Pago p = new Pago(NCC,nameTCC,CCV,UserDP,ReseFP);
+                VenDetallesFin s = new VenDetallesFin();
+                dispose();
+            }catch(NumberFormatException e){
+                var b = JOptionPane.showConfirmDialog(rootPane, "Validar numeros registrados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+            }
+
+        }
+        Pago p = new Pago(UserDP,ReseFP);
         VenDetallesFin s = new VenDetallesFin();
-        dispose();
+        //pending send to pago.java the other 2 (or 3) payment methods
     }
 
     private void habilitarOpcion() {

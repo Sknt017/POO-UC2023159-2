@@ -25,6 +25,11 @@ public final class Pago {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
+    public Pago(String[] UserDP, String[] ReseFP) {
+        VenDetallesFin sec4 =   new VenDetallesFin(UserDP,ReseFP);
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public Long getCCNumero() {
         return CCNumero;
     }
