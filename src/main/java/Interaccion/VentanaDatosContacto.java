@@ -20,7 +20,7 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
      * Creates new form VentanaDatosContacto
      */
     public VentanaDatosContacto() {
-        //initComponents();
+        initComponents();
     }
 
     public VentanaDatosContacto(String[] ResF) {
