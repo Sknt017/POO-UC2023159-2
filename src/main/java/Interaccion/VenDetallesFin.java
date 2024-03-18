@@ -134,7 +134,9 @@ public class VenDetallesFin extends javax.swing.JFrame {
 
     private void JBoSiguenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBoSiguenteActionPerformed
         // TODO add your handling code here:
-        this.irADatosContacto();
+        //this.irADatosContacto();
+        dispose();
+        this.nextS();
 
     }//GEN-LAST:event_JBoSiguenteActionPerformed
 
@@ -179,5 +181,15 @@ public class VenDetallesFin extends javax.swing.JFrame {
         System.out.print(euf);
         System.out.print(pnf);
         System.out.print(pn2f);
+    }
+
+    private void nextS() {
+        //Create list and storage it on a file
+        //go to the end of the project
+        VenProcesoFin endPro = new VenProcesoFin();
+        this.dispose();
+        endPro.show();
+        this.setVisible(false);
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

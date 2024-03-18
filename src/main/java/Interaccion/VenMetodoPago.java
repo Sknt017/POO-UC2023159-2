@@ -318,6 +318,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
         }
         Pago p = new Pago(UserDP,ReseFP);
         VenDetallesFin s = new VenDetallesFin();
+        dispose();
         //pending send to pago.java the other 2 (or 3) payment methods
     }
 
