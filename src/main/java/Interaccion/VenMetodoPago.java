@@ -235,6 +235,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
 
     private void jBotPagEfe3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotPagEfe3ActionPerformed
         // TODO add your handling code here:
+        this.Pefe();
     }//GEN-LAST:event_jBotPagEfe3ActionPerformed
 
     private void JcSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JcSiguienteActionPerformed
@@ -371,6 +372,11 @@ public class VenMetodoPago extends javax.swing.JFrame {
             
             
         }
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void Pefe() {
+        var b = JOptionPane.showConfirmDialog(rootPane, "Para pago en efectivo favor confirmar \n   en caja en el lugar de la reserva", "Informacion", JOptionPane.CLOSED_OPTION, JOptionPane.INFORMATION_MESSAGE);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
