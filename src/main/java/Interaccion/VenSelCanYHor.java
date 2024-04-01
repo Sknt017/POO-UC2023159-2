@@ -423,10 +423,11 @@ public class VenSelCanYHor extends javax.swing.JFrame {
             var b = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: anio", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);   
             return false;
         }
-        if(Cm>Smes){
+        if(Cm>Smes&&Cy>Sanio){
             var c = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: mes", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             return false;
         }
+        //
         if(Cd>=Sdia){
             var d = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: dia", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             return false;
