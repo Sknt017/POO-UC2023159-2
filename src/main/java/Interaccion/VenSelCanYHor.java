@@ -427,8 +427,16 @@ public class VenSelCanYHor extends javax.swing.JFrame {
             var c = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: mes", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             return false;
         }
+        if(Cm>Smes){
+            var c = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: mes", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+            return false;
+        }
+        if(Cm>Smes&&Cy<=Sanio){
+            //var c = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: mes", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+            return true;
+        }        
         //
-        if(Cd>=Sdia){
+        if(Cd>=Sdia&&Cm>=Smes&&Cy>=Sanio){
             var d = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: dia", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             return false;
         } else {
