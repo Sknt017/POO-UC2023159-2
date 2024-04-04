@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -6,7 +6,10 @@ package Interaccion;
 
 import Procedimientos.Referencias;
 import Procedimientos.Reserva;
+import Reservas.Solicitudes;
 import java.util.Arrays;
+import java.util.ArrayList;
+
 
 /**
  *
@@ -18,7 +21,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
      */
     String nof,euf;
     Long pnf,pn2f;
-    String[] ReservationF;
+    //String[] ReservationF;
             
     /**
      *
@@ -28,6 +31,14 @@ public class VenDetallesFin extends javax.swing.JFrame {
         //Referencias re = new Referencias(); this better be called at the end of all the forms
         //String Ref = re.generarReferencia(); 
         //next slide doesnt show
+        ArrayList<String> Reservation = new ArrayList<>();
+        for(int i = 0;UserD.length>i;i++){
+            Reservation.add(UserD[i]);
+        }
+        for(int i = 0;ReseF.length>i;i++){
+            Reservation.add(ReseF[i]);
+        }
+        //ReservationF = UserD;
         initComponents();
         show();
         nof = UserD[0];
@@ -36,8 +47,9 @@ public class VenDetallesFin extends javax.swing.JFrame {
         pn2f = Long.valueOf(UserD[3]);
         this.jResumen.append("nombre Usuario: "+nof+"\nCorreo Electronico Registrado: "+euf+"\nnumero de contacto "+pnf+"\notro numero de contacto: "+pn2f/*+"\nNo. Reservacion: "+Ref*/);
         this.jResumen.append("\nDesde la(s): "+ReseF[0]+"\nHasta la(s): "+ReseF[1]+"\nEl: "+ReseF[2]+" / "+ReseF[3]+" / "+ReseF[4]+"\ncancha: "+ReseF[5]);
-        System.out.println(Arrays.toString(ReseF));
+        System.out.println("whole reservation details: "+Reservation);
         this.jResumen.setEditable(false);
+        Solicitudes RS = new Solicitudes();
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public VenDetallesFin(){
@@ -169,18 +181,18 @@ public class VenDetallesFin extends javax.swing.JFrame {
         VenMetodoPago vp = new VenMetodoPago();
         vp.setVisible(true);
         this.dispose();
-        System.out.print(nof);
-        System.out.print(euf);
-        System.out.print(pnf);
-        System.out.print(pn2f);
+//        System.out.print(nof);
+//        System.out.print(euf);
+//        System.out.print(pnf);
+//        System.out.print(pn2f);
     }
     private void irADatosContacto() {
         VenDetallesFin vdf = new VenDetallesFin();
         //vdf.
-        System.out.print(nof);
-        System.out.print(euf);
-        System.out.print(pnf);
-        System.out.print(pn2f);
+//        System.out.print(nof);
+//        System.out.print(euf);
+//        System.out.print(pnf);
+//        System.out.print(pn2f);
     }
 
     private void nextS() {
