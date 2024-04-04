@@ -4,7 +4,6 @@ Interaccion\VenSelCanYHor$3.class
 Interaccion\VentanaDatosContacto.class
 Reservas\Solicitudes.class
 Reservas\Resumen.class
-Interaccion\JDlogpgNeq$1.class
 Interaccion\VenMetodoPago$2.class
 Interaccion\VentanaInicio.class
 Interaccion\VenCancelReserva$2.class
@@ -34,10 +33,8 @@ Interaccion\VenMetodoPago$7.class
 Interaccion\VentanaDatosContacto$2.class
 Interaccion\VenProcesoFinError.class
 Interaccion\VenSelCanYHor$8.class
-Interaccion\JDlogpgNeq.class
 Procedimientos\Pago.class
 Interaccion\VenCancelReserva$3.class
-Interaccion\JDlogpgNeq$1$1.class
 Interaccion\VenSelCanYHor$2.class
 Interaccion\VenSelCanYHor$5.class
 Interaccion\VentanaDatosContacto$5.class
