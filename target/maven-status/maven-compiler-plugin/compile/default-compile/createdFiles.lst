@@ -1,5 +1,4 @@
 Interaccion\VentanaDatosContacto$4.class
-Interaccion\VenMetodoPago$9.class
 Interaccion\VenSelCanYHor$3.class
 Interaccion\VentanaDatosContacto.class
 Reservas\Solicitudes.class
@@ -10,7 +9,6 @@ Interaccion\VenCancelReserva$2.class
 Interaccion\VenDetallesFin$1.class
 com\mycompany\poo\uc\POOUC.class
 Interaccion\VenSelCanYHor$7.class
-Interaccion\VenProcesoFin$3.class
 Interaccion\VenMetodoPago$5.class
 Interaccion\VenProcesoFin$1.class
 Interaccion\VenSelCanYHor$4.class
@@ -28,7 +26,6 @@ Interaccion\VenSelCanYHor$1.class
 Interaccion\VenCancelReserva.class
 Interaccion\VentanaInicio$2.class
 Interaccion\VenMetodoPago$4.class
-Interaccion\VentanaDatosContacto$6.class
 Interaccion\VenMetodoPago$7.class
 Interaccion\VentanaDatosContacto$2.class
 Interaccion\VenProcesoFinError.class
