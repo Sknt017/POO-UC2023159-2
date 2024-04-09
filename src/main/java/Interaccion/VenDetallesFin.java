@@ -19,26 +19,26 @@ public class VenDetallesFin extends javax.swing.JFrame {
     /**
      * Creates new form VenDetallesFin
      */
-    String nof,euf;
+    String nof,euf,RefRes;
     Long pnf,pn2f;
+    ArrayList<String> Reservation = new ArrayList<>();
     //String[] ReservationF;
             
     /**
      *
-     * @param UserD
+     * @param UserD User Data Reservation (contact details)
+     * @param ReseF User Reservation Details (stage, date and hours)
      */
     public VenDetallesFin(String[] UserD, String[] ReseF) {
         //Referencias re = new Referencias(); this better be called at the end of all the forms
-        //String Ref = re.generarReferencia(); 
-        //next slide doesnt show
-        ArrayList<String> Reservation = new ArrayList<>();
+        //String Ref = re.generarReferencia();
+        
         for(int i = 0;UserD.length>i;i++){
             Reservation.add(UserD[i]);
         }
         for(int i = 0;ReseF.length>i;i++){
             Reservation.add(ReseF[i]);
         }
-        //ReservationF = UserD;
         initComponents();
         show();
         nof = UserD[0];
@@ -198,7 +198,9 @@ public class VenDetallesFin extends javax.swing.JFrame {
     private void nextS() {
         //Create list and storage it on a file
         //go to the end of the project
-        VenProcesoFin endPro = new VenProcesoFin();
+        Referencias re = new Referencias();
+        RefRes = re.generarReferencia();
+        VenProcesoFin endPro = new VenProcesoFin(RefRes);
         this.dispose();
         endPro.show();
         this.setVisible(false);
