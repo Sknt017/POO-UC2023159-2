@@ -181,18 +181,6 @@ public class VenDetallesFin extends javax.swing.JFrame {
         VenMetodoPago vp = new VenMetodoPago();
         vp.setVisible(true);
         this.dispose();
-//        System.out.print(nof);
-//        System.out.print(euf);
-//        System.out.print(pnf);
-//        System.out.print(pn2f);
-    }
-    private void irADatosContacto() {
-        VenDetallesFin vdf = new VenDetallesFin();
-        //vdf.
-//        System.out.print(nof);
-//        System.out.print(euf);
-//        System.out.print(pnf);
-//        System.out.print(pn2f);
     }
 
     private void nextS() {
