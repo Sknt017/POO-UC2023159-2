@@ -4,14 +4,18 @@
  */
 package Reservas;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author dasan
  */
 public class Solicitudes {
+    ArrayList<String> SReservation;
 
-    public Solicitudes(String[] ReservationF) {
-        
+    public Solicitudes(ArrayList<String> ReservationF) {
+        SReservation = ReservationF;
+        System.out.println("in solicitudes.java"+SReservation);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

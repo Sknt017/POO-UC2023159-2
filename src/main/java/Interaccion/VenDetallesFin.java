@@ -49,7 +49,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
         this.jResumen.append("\nDesde la(s): "+ReseF[0]+"\nHasta la(s): "+ReseF[1]+"\nEl: "+ReseF[2]+" / "+ReseF[3]+" / "+ReseF[4]+"\ncancha: "+ReseF[5]);
         System.out.println("whole reservation details: "+Reservation);
         this.jResumen.setEditable(false);
-        Solicitudes RS = new Solicitudes();
+        //Solicitudes RS = new Solicitudes(Reservation);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public VenDetallesFin(){
@@ -188,7 +188,9 @@ public class VenDetallesFin extends javax.swing.JFrame {
         //go to the end of the project
         Referencias re = new Referencias();
         RefRes = re.generarReferencia();
+        Reservation.add(RefRes);
         VenProcesoFin endPro = new VenProcesoFin(RefRes);
+        Solicitudes RS = new Solicitudes(Reservation);
         this.dispose();
         endPro.show();
         this.setVisible(false);

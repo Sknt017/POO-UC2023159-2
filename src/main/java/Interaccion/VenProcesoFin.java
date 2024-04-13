@@ -16,10 +16,10 @@ public class VenProcesoFin extends javax.swing.JFrame {
      * Creates new form VenProcesoFin
      */
     public VenProcesoFin() {
-        initComponents();
-        Referencias re = new Referencias(); //this better be called at the end of all the forms
-        String Ref = re.generarReferencia();
-        this.JReservaNo.setText(Ref);
+//        initComponents();
+//        Referencias re = new Referencias(); //this better be called at the end of all the forms
+//        String Ref = re.generarReferencia();
+//        this.JReservaNo.setText(Ref);
     }
 
     VenProcesoFin(String RefRes) {
