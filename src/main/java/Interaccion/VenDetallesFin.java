@@ -21,7 +21,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
      */
     String nof,euf,RefRes;
     Long pnf,pn2f;
-    ArrayList<String> Reservation = new ArrayList<>();
+    ArrayList<Object> Reservation = new ArrayList<>();
     //String[] ReservationF;
             
     /**

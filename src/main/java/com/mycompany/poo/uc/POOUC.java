@@ -5,6 +5,7 @@
 package com.mycompany.poo.uc;
 
 import Interaccion.VentanaInicio;
+import Reservas.Solicitudes;
 
 /**
  *
@@ -13,6 +14,7 @@ import Interaccion.VentanaInicio;
 public class POOUC {
 
     public static void main(String[] args) {
+        Solicitudes slc = new Solicitudes();
         VentanaInicio n = new VentanaInicio();
         //System.out.println("Hello World!");
         System.out.println("Project execution in progress...");
