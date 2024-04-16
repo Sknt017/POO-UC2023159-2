@@ -37,13 +37,13 @@ public class Solicitudes {
     public Solicitudes() {
         try{
         FileInputStream readData = new FileInputStream("reservations.resl");
-        ObjectInputStream readStream = new ObjectInputStream(readData);
-
-        SReservation = (ArrayList<Object>) readStream.readObject();
-        readStream.close();
+            try (ObjectInputStream readStream = new ObjectInputStream(readData)) {
+                SReservation = (ArrayList<Object>) readStream.readObject();
+            }
         System.out.println(SReservation.toString());
-    }catch (Exception e) {
-        e.printStackTrace();
+    }catch (IOException | ClassNotFoundException e) {
+        //e.printStackTrace();
+            System.out.println(e);
     }
        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
