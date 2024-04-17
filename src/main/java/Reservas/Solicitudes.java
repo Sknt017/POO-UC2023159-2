@@ -19,6 +19,7 @@ public class Solicitudes {
     ArrayList<Object> SReservation;
 
     public Solicitudes(ArrayList<Object> ReservationF) {
+        //only storages one reservation
         SReservation = ReservationF;
         System.out.println("in solicitudes.java: "+SReservation);
         try{
@@ -29,7 +30,7 @@ public class Solicitudes {
             }
 
         }catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e);
 }
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }

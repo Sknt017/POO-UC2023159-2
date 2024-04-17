@@ -12,6 +12,8 @@ import Interaccion.VenDetallesFin;
  */
 public final class Pago {
     //recibir, encapsular_/, almacenar.
+    
+    //add payment method to the arraylist
     private Long CCNumero;
     private String titularCC;
     private int cCCV;
@@ -62,8 +64,8 @@ public final class Pago {
     public void procederPagoNequi(){
         
     }
-    public void procederPagoEfectivo(){
-        
+    public boolean procederPagoEfectivo(){
+        return true;
     }
     
 }
