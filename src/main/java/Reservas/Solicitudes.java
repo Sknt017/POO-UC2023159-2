@@ -20,6 +20,7 @@ public class Solicitudes {
 
     public Solicitudes(ArrayList<Object> ReservationF) {
         //only storages one reservation
+        //use constructor as a table of data(?)
         SReservation = ReservationF;
         System.out.println("in solicitudes.java: "+SReservation);
         try{
