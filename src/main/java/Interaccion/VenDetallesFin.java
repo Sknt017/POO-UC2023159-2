@@ -22,7 +22,6 @@ public class VenDetallesFin extends javax.swing.JFrame {
     String nof,euf,RefRes;
     Long pnf,pn2f;
     ArrayList<Object> Reservation = new ArrayList<>();
-    //String[] ReservationF;
             
     /**
      *
@@ -30,8 +29,6 @@ public class VenDetallesFin extends javax.swing.JFrame {
      * @param ReseF User Reservation Details (stage, date and hours)
      */
     public VenDetallesFin(String[] UserD, String[] ReseF) {
-        //Referencias re = new Referencias(); this better be called at the end of all the forms
-        //String Ref = re.generarReferencia();
         
         for(int i = 0;UserD.length>i;i++){
             Reservation.add(UserD[i]);
@@ -49,8 +46,6 @@ public class VenDetallesFin extends javax.swing.JFrame {
         this.jResumen.append("\nDesde la(s): "+ReseF[0]+"\nHasta la(s): "+ReseF[1]+"\nEl: "+ReseF[2]+" / "+ReseF[3]+" / "+ReseF[4]+"\ncancha: "+ReseF[5]);
         System.out.println("whole reservation details: "+Reservation);
         this.jResumen.setEditable(false);
-        //Solicitudes RS = new Solicitudes(Reservation);
-        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public VenDetallesFin(){
         initComponents();
@@ -160,13 +155,6 @@ public class VenDetallesFin extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-//    public static void main(String args[]) {
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new VenDetallesFin().setVisible(true);
-//            }
-//        });
-//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBoAtras;
@@ -194,6 +182,5 @@ public class VenDetallesFin extends javax.swing.JFrame {
         this.dispose();
         endPro.show();
         this.setVisible(false);
-        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
