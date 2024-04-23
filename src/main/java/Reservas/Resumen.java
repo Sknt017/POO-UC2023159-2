@@ -9,6 +9,9 @@ package Reservas;
  * @author dasan
  */
 public class Resumen {
+    //crear tabla: https://www.developer.com/java/java-tables/
+    //almacenar tabla.
+    
     public String generarResumenReserva(){
         return "";
     }
