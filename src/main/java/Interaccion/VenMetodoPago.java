@@ -18,7 +18,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
     /**
      * Creates new form VenMetodoPago
      */
-    String[] UserDP,ReseFP;
+    String[] UserDP,ReseFP;String UserPay;
     public VenMetodoPago() {
         initComponents();
         this.jBotPagEfe3.setEnabled(false);
@@ -70,7 +70,6 @@ public class VenMetodoPago extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(480, 390));
-        setPreferredSize(new java.awt.Dimension(480, 390));
 
         jBotPagNeq.setText("Pago Nequi");
         jBotPagNeq.addActionListener(new java.awt.event.ActionListener() {
@@ -302,6 +301,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         if(this.jComboBox1.getSelectedIndex()==1||this.jComboBox1.getSelectedIndex()==2){
             try{
+                UserPay = (String) this.jComboBox1.getSelectedItem();
                 Long NCC = Long.valueOf(this.CCnum.getText());
                 System.out.print("CCNum: "+ NCC +"\n");
                 String nameTCC = this.nameCC.getText();
@@ -309,7 +309,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
                 //char[] CCV = this.jCCV.getPassword();
                 int CCV = Integer.parseInt(this.jCCV.getText());
                 System.out.print("CCV: "+ CCV +"\n");
-                Pago p = new Pago(NCC,nameTCC,CCV,UserDP,ReseFP);
+                Pago p = new Pago(NCC,nameTCC,CCV,UserDP,ReseFP,UserPay);
                 VenDetallesFin s = new VenDetallesFin();
                 dispose();
             }catch(NumberFormatException e){
@@ -317,7 +317,8 @@ public class VenMetodoPago extends javax.swing.JFrame {
             }
 
         }
-        Pago p = new Pago(UserDP,ReseFP);
+        UserPay=(String) this.jComboBox1.getSelectedItem();
+        Pago p = new Pago(UserDP,ReseFP,UserPay);
         VenDetallesFin s = new VenDetallesFin();
         dispose();
         //pending send to pago.java the other 2 (or 3) payment methods

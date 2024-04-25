@@ -18,17 +18,17 @@ public final class Pago {
     private String titularCC;
     private int cCCV;
 
-    public Pago(Long NCC, String nameTCC, int CCV, String[] UserDP, String[] ReseFP) {
+    public Pago(Long NCC, String nameTCC, int CCV, String[] UserDP, String[] ReseFP, String UserPay) {
         CCNumero = NCC;
         titularCC = nameTCC;
         cCCV = CCV;
         //System.out.print("in pay class...\n "+CCNumero);
-        VenDetallesFin sec4 =   new VenDetallesFin(UserDP,ReseFP);
+        VenDetallesFin sec4 =   new VenDetallesFin(UserDP,ReseFP, UserPay);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public Pago(String[] UserDP, String[] ReseFP) {
-        VenDetallesFin sec4 =   new VenDetallesFin(UserDP,ReseFP);
+    public Pago(String[] UserDP, String[] ReseFP, String UserPay) {
+        VenDetallesFin sec4 =   new VenDetallesFin(UserDP,ReseFP,UserPay);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
