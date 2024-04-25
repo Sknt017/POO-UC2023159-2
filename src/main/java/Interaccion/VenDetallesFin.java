@@ -22,7 +22,9 @@ public class VenDetallesFin extends javax.swing.JFrame {
     String nof,euf,RefRes;
     Long pnf,pn2f;
     ArrayList<Object> Reservation = new ArrayList<>();
-            
+    String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2",
+                            "Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
+    String[][] ResList= new String[this.columnNames.length][12];
     /**
      *
      * @param UserD User Data Reservation (contact details)
@@ -174,9 +176,19 @@ public class VenDetallesFin extends javax.swing.JFrame {
     private void nextS() {
         //Create list and storage it on a file
         //go to the end of the project
+//        ResList = {
+//        
+//        {Reservation.get(1)
+//    
+//    };
+        for(int i = 0; i<columnNames.length;i++){
+            ResList[0][i]=columnNames[i];
+        }
+        System.out.println(Arrays.toString(ResList[0]));
         Referencias re = new Referencias();
         RefRes = re.generarReferencia();
         Reservation.add(RefRes);
+        System.out.println(Reservation.size());
         VenProcesoFin endPro = new VenProcesoFin(RefRes);
         Solicitudes RS = new Solicitudes(Reservation);
         this.dispose();

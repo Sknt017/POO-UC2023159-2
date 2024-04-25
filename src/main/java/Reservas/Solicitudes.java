@@ -17,10 +17,11 @@ import java.util.ArrayList;
  */
 public class Solicitudes {
     ArrayList<Object> SReservation;
-
+    //Object[][] ResList;
+    
     public Solicitudes(ArrayList<Object> ReservationF) {
         //only storages one reservation
-        //use constructor as a table of data(?)
+        //use matrix as a list 
         SReservation = ReservationF;
         System.out.println("in solicitudes.java: "+SReservation);
         try{
@@ -49,7 +50,6 @@ public class Solicitudes {
     }
        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    //String[] FReser; 
     public void realizarReserva(){
         
     }
