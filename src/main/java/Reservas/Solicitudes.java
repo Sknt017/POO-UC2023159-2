@@ -17,7 +17,6 @@ import java.util.ArrayList;
  */
 public class Solicitudes {
     ArrayList<Object> SReservation;
-    //Object[][] ResList;
     
     public Solicitudes(ArrayList<Object> ReservationF) {
         //only storages one reservation
@@ -45,10 +44,8 @@ public class Solicitudes {
             }
         System.out.println(SReservation.toString());
     }catch (IOException | ClassNotFoundException e) {
-        //e.printStackTrace();
             System.out.println(e);
     }
-       //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public void realizarReserva(){
         

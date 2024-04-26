@@ -171,13 +171,11 @@ public class VenDetallesFin extends javax.swing.JFrame {
     private javax.swing.JTextArea jResumen;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
-    
     private void regresar() {
         VenMetodoPago vp = new VenMetodoPago();
         vp.setVisible(true);
         this.dispose();
     }
-
     private void nextS() {
         //Create list and storage it on a file
         //go to the end of the project
@@ -187,11 +185,19 @@ public class VenDetallesFin extends javax.swing.JFrame {
         for(int i = 0;i<columnNames.length;i++){
             ResList[0][i]=columnNames[i];
         }
+        /*for(int i = 0;i<ResList.length;i++){
+            
+        }*/
+        if(ResList[a][0]!=null){
+                a++;
+        }
         for(int i = 0;i<columnNames.length/*-1*/;i++){
             ResList[a][i]=(String) Reservation.get(i);
         }
-        a++;
-        System.out.println(Arrays.toString(ResList[0])+"\n"+Arrays.toString(ResList[1]));
+        if(a==12){
+            a--;
+        }
+        System.out.println(Arrays.toString(ResList[0])+"\n"+Arrays.toString(ResList[1])+"\n"+Arrays.toString(ResList[2]));
         //System.out.println(Reservation.size());
         VenProcesoFin endPro = new VenProcesoFin(RefRes);
         Solicitudes RS = new Solicitudes(Reservation);
