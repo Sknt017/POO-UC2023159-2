@@ -288,34 +288,18 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         Sdia = calendar.get(Calendar.DATE);
         Smes = calendar.get(Calendar.MONTH);
         Sanio = calendar.get(Calendar.YEAR);
-        //System.out.print("\nPicked option: "+String.valueOf(SelCan));
         if(SelCan==0||this.dateCheck(Sdia,Smes,Sanio)==false||this.dateCheck()==false){
-            //throw new IllegalArgumentException("Please select a field.");
             if(SelCan==0){
                 var b = JOptionPane.showConfirmDialog(rootPane, "Favor Seleccionar una cancha", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             }else if(this.dateCheck()==false&&this.dateCheck(Sdia,Smes,Sanio)==true){
                 var b = JOptionPane.showConfirmDialog(rootPane, "Elegir una hora diferente", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             }
         }else{
-        //[DONE]usar instancia calendar para extraer de hor.fechareserva el mes y el año de la variable de tipo Date "fechaReserva"
-        //[DONE]usar hor.fechareserva instead of PickedDate variable
-        //!!!make the form to check if the picked date for the reservation is a valid date.!!!
-        //String 
-        //System.out.print(hor.fechaReserva+"\n");
         
-        //System.out.print("\nPickedDate day returns..  "+Sdia+" month "+Smes+" anio "+Sanio+" Stage picked... "+Copt);
-        ////System.out.print(Copt+"\n dia: "+Sdia);
-        //System.out.println ("\n"+Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1)/*cha.getDescripccionCancha()*/));
-        //System.out.println("\nPicked Hours: "+desdeHoraCB+" - "+hastaHoraCB+ "item in cb: "+desdeHora);
         int time1 = this.jCajaDesde.getSelectedIndex();
-        String pTime1 = String.valueOf(this.jCajaDesde.getSelectedItem());//<---------
-        //String Dcan = Arrays.toString (Arrays.copyOfRange(cha.getDescripccionCancha(), SelCan,SelCan+1));
-        //new Canchas(hor.fechaReserva,Copt);
-        //System.out.print("Picked time: "+pTime1+" "+ time1);
-        //System.out.print("\n end of outputs in class canchaHorario\n");
+        String pTime1 = String.valueOf(this.jCajaDesde.getSelectedItem());
         Horarios ho = new Horarios(Sdia,Smes,Sanio);
         Reserva UR = new Reserva(desdeHoraCB,hastaHoraCB,Sdia,Smes,Sanio,Copt);
-        //sec3.show();
         dispose();
         }
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
@@ -339,16 +323,10 @@ public class VenSelCanYHor extends javax.swing.JFrame {
 
     private void modifyCBEnd(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
-            //System.out.println("Yee");
-        //Do any operations you need to do when an item is selected.
         } else if(e.getStateChange() == ItemEvent.DESELECTED){
-        //Do any operations you need to do when an item is de-selected.
             this.jCajaHasta.removeAllItems();
-            //System.out.println("nah");
             int desdeHora = this.jCajaDesde.getSelectedIndex()+3;
             int hastaHora = desdeHora+1;
-            //System.out.println("item in cb: "+desdeHora+" next hour in cbtill: "+ hastaHora+" : 00 ");
-            //this.jCajaHasta.removeItemAt(this.jCajaHasta.getItemCount()-1);
             for(int i=desdeHora;i<12;i++){
                 this.jCajaHasta.addItem(i+1+":00 AM");
                 if(i==11){
@@ -369,7 +347,6 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         int Cd = calendar.get(Calendar.DATE);
         int Cm = calendar.get(Calendar.MONTH);
         int Cy = calendar.get(Calendar.YEAR);
-        //System.out.println("current time???... "+Cd+"/"+Cm+"/"+Cy);
         
         if(Cy>Sanio){
             var b = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: anio", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);   
