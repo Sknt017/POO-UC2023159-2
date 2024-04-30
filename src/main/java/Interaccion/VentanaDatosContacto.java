@@ -183,13 +183,6 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-//    public static void main(String args[]) {
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new VentanaDatosContacto().setVisible(true);
-//            }
-//        });
-//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBoAtras;
@@ -226,23 +219,15 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
             if(!matcher.matches()){
                 throw new IllegalArgumentException("Email input invalid");
             }
-            Long Tel1 = Long.valueOf(this.jcont1.getText());//switch to long so it recieves actual phone numbers
+            Long Tel1 = Long.valueOf(this.jcont1.getText());
             Long Tel2 = Long.valueOf(this.jCont2.getText());
-            //VenDetallesFin sec4 = new VenDetallesFin(ReseF);
             Usuario du = new Usuario (NombreU,UEmail,Tel1,Tel2,ReseF);
-            //new VenDetallesFin();
-            //sec4.show();
-            //VenMetodoPago sec4 = new VenMetodoPago();
-//            tomarDatosContacto();
             dispose();
         }catch(NumberFormatException e){
-            //System.out.print(e.getMessage());
             var b = JOptionPane.showConfirmDialog(rootPane, "Validar numeros registrados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
-            //System.out.print(Arrays.toString(ReseF));
         }catch(IllegalArgumentException e){
             var b = JOptionPane.showConfirmDialog(rootPane, "Validar Correo electronico registrado", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
         }
-        //new VenDetallesFin(NombreU,UEmail,Tel1,Tel2);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
