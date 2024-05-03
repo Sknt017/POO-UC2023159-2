@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -17,6 +18,7 @@ import java.util.ArrayList;
  */
 public class Solicitudes {
     ArrayList<Object> SReservation;
+    //List<String> ResL; 
     
     public Solicitudes(ArrayList<Object> ReservationF) {
         //only storages one reservation

@@ -21,7 +21,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
      */
     String nof,euf,RefRes;
     Long pnf,pn2f;
-    int a=1;
+    int a;
     ArrayList<Object> Reservation = new ArrayList<>();
     String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2","Metodo Pago",
                             "Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
@@ -177,6 +177,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
         this.dispose();
     }
     private void nextS() {
+        a=1;
         //Create list and storage it on a file
         //go to the end of the project
         Referencias re = new Referencias();
@@ -185,11 +186,10 @@ public class VenDetallesFin extends javax.swing.JFrame {
         for(int i = 0;i<columnNames.length;i++){
             ResList[0][i]=columnNames[i];
         }
-        /*for(int i = 0;i<ResList.length;i++){
-            
-        }*/
-        if(ResList[a][0]!=null){
+        for(int i = 0;i<a;i++){
+            if(ResList[a][0]!=null){
                 a++;
+        }
         }
         for(int i = 0;i<columnNames.length/*-1*/;i++){
             ResList[a][i]=(String) Reservation.get(i);
