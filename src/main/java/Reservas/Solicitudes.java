@@ -18,41 +18,59 @@ import java.util.List;
  */
 public class Solicitudes {
     ArrayList<Object> SReservation;
-    //List<String> ResL; 
+    String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2","Metodo Pago",
+                            "Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
+    String[][] ResList= new String[this.columnNames.length][12];
     
+    //List<String> ResL;
+
+//    public void fillHeader(){
+//        for(int i = 0;i<this.columnNames.length;i++){
+//            ResList[0][i]=columnNames[i];
+//       }
+//    };
+    public Solicitudes(){
+            for(int i = 0;i<this.columnNames.length;i++){
+            ResList[0][i]=columnNames[i];
+       }
+}
     public Solicitudes(ArrayList<Object> ReservationF) {
         //only storages one reservation
         //use matrix as a list 
         SReservation = ReservationF;
+        for(int i = 0;i<columnNames.length;i++){
+            ResList[0][i]=columnNames[i];
+        }
         System.out.println("in solicitudes.java: "+SReservation);
-        try{
-            FileOutputStream writeData = new FileOutputStream("reservations.resl");
-            try (ObjectOutputStream writeStream = new ObjectOutputStream(writeData)) {
-                writeStream.writeObject(SReservation);
-                writeStream.flush();
-            }
-
-        }catch (IOException e) {
-            System.out.println(e);
-}
+//        try{
+//            FileOutputStream writeData = new FileOutputStream("reservations.resl");
+//            try (ObjectOutputStream writeStream = new ObjectOutputStream(writeData)) {
+//                writeStream.writeObject(SReservation);
+//                writeStream.flush();
+//            }
+//
+//        }catch (IOException e) {
+//            System.out.println(e);
+//}
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+//    }
 
-    public Solicitudes() {
-        try{
-        FileInputStream readData = new FileInputStream("reservations.resl");
-            try (ObjectInputStream readStream = new ObjectInputStream(readData)) {
-                SReservation = (ArrayList<Object>) readStream.readObject();
-            }
-        System.out.println(SReservation.toString());
-    }catch (IOException | ClassNotFoundException e) {
-            System.out.println(e);
-    }
-    }
-    public void realizarReserva(){
-        
-    }
-    public void cancelarReserva(){
-        
-    }
+//    public Solicitudes() {
+//        try{
+//        FileInputStream readData = new FileInputStream("reservations.resl");
+//            try (ObjectInputStream readStream = new ObjectInputStream(readData)) {
+//                SReservation = (ArrayList<Object>) readStream.readObject();
+//            }
+//        System.out.println(SReservation.toString());
+//    }catch (IOException | ClassNotFoundException e) {
+//            System.out.println(e);
+//    }
+//    }
+//    public void realizarReserva(){
+//        
+//    }
+//    public void cancelarReserva(){
+//        
+//    }
 }
+    }

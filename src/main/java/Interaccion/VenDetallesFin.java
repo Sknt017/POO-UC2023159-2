@@ -23,9 +23,9 @@ public class VenDetallesFin extends javax.swing.JFrame {
     Long pnf,pn2f;
     int a;
     ArrayList<Object> Reservation = new ArrayList<>();
-    String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2","Metodo Pago",
-                            "Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
-    String[][] ResList= new String[this.columnNames.length][12];
+//    String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2","Metodo Pago",
+//                            "Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
+//    String[][] ResList= new String[this.columnNames.length][12];
     
     /**
      *
@@ -183,21 +183,21 @@ public class VenDetallesFin extends javax.swing.JFrame {
         Referencias re = new Referencias();
         RefRes = re.generarReferencia();
         Reservation.add(RefRes);
-        for(int i = 0;i<columnNames.length;i++){
-            ResList[0][i]=columnNames[i];
-        }
-        for(int i = 0;i<a;i++){
-            if(ResList[a][0]!=null){
-                a++;
-        }
-        }
-        for(int i = 0;i<columnNames.length/*-1*/;i++){
-            ResList[a][i]=(String) Reservation.get(i);
-        }
-        if(a==12){
-            a--;
-        }
-        System.out.println(Arrays.toString(ResList[0])+"\n"+Arrays.toString(ResList[1])+"\n"+Arrays.toString(ResList[2]));
+//        for(int i = 0;i<columnNames.length;i++){
+//            ResList[0][i]=columnNames[i];
+//        }
+//        for(int i = 0;i<a;i++){
+//            if(ResList[a][0]!=null){
+//                a++;
+//        }
+//        }
+//        for(int i = 0;i<columnNames.length/*-1*/;i++){
+//            ResList[a][i]=(String) Reservation.get(i);
+//        }
+//        if(a==12){
+//            a--;
+//        }
+//        System.out.println(Arrays.toString(ResList[0])+"\n"+Arrays.toString(ResList[1])+"\n"+Arrays.toString(ResList[2]));
         //System.out.println(Reservation.size());
         VenProcesoFin endPro = new VenProcesoFin(RefRes);
         Solicitudes RS = new Solicitudes(Reservation);
