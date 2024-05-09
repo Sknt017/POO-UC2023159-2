@@ -33,7 +33,7 @@ public class Solicitudes {
             for(int i = 0;i<this.columnNames.length;i++){
             ResList[0][i]=columnNames[i];
        }
-}
+    }
     public Solicitudes(ArrayList<Object> ReservationF) {
         //only storages one reservation
         //use matrix as a list 
