@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -21,7 +22,8 @@ public class Solicitudes {
     String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2","Metodo Pago",
                             "Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
     String[][] ResList= new String[this.columnNames.length][12];
-    
+    int a = 1;
+    //this.ResList[0][0] = columnNames[1];
     //List<String> ResL;
 
 //    public void fillHeader(){
@@ -30,18 +32,32 @@ public class Solicitudes {
 //       }
 //    };
     public Solicitudes(){
-            for(int i = 0;i<this.columnNames.length;i++){
-            ResList[0][i]=columnNames[i];
-       }
+//            for(int i = 0;i<this.columnNames.length;i++){
+//            ResList[0][i]=columnNames[i];
+//       }
     }
     public Solicitudes(ArrayList<Object> ReservationF) {
-        //only storages one reservation
-        //use matrix as a list 
         SReservation = ReservationF;
-        for(int i = 0;i<columnNames.length;i++){
+        //only storages one reservation
+        for(int i = 0;i<this.columnNames.length;i++){
             ResList[0][i]=columnNames[i];
         }
+        System.out.println(Arrays.toString(ResList[1]));
+        //use matrix as a list
+        for(int i = 0;i<columnNames.length;i++){
+            //SReservation.set(i, ResList[a][i]);
+            ResList[a][i] = (String) SReservation.get(i);
+        }
         System.out.println("in solicitudes.java: "+SReservation);
+        System.out.println("position: "+a);
+        for(int i = 0;i<a;i++){
+            if(ResList[a][0]!=null){
+                a++;
+            }
+        }
+        //a++;
+        System.out.println(Arrays.toString(ResList[0])+"\n"+Arrays.toString(ResList[1])+"\n"+Arrays.toString(ResList[2]));
+        //SReservation.g
 //        try{
 //            FileOutputStream writeData = new FileOutputStream("reservations.resl");
 //            try (ObjectOutputStream writeStream = new ObjectOutputStream(writeData)) {
@@ -72,5 +88,5 @@ public class Solicitudes {
 //    public void cancelarReserva(){
 //        
 //    }
-}
     }
+}
