@@ -179,11 +179,6 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
     private void jEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEmailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jEmailActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBoAtras;
     private javax.swing.JButton JBoSiguente;
@@ -204,10 +199,7 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
         dispose(); 
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    public void tomarDatosContacto(){
-        //Usuario dataU = new Usuario();
-        //new Usuario(NombreU,UEmail,Tel1,Tel2);
-        
+    public void tomarDatosContacto(){ 
     }
     private void siguiente() {
         try{
