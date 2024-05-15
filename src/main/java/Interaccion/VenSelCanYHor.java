@@ -246,10 +246,6 @@ public class VenSelCanYHor extends javax.swing.JFrame {
     
     }//GEN-LAST:event_jCajaDesdeItemStateChanged
 
-    /**
-     * @param args the command line arguments
-     */
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBoAtras;
     private javax.swing.JButton JBoSiguente;
