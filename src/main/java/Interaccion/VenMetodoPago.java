@@ -357,11 +357,6 @@ public class VenMetodoPago extends javax.swing.JFrame {
                 this.jBotPagEfe3.setEnabled(false);
                 this.JcSiguiente.setEnabled(true);
             }
-
-
-
-            
-            
         }
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }

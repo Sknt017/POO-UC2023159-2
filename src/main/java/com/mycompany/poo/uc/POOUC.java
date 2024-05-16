@@ -15,6 +15,7 @@ public class POOUC {
 
     public static void main(String[] args) {
         Solicitudes slc = new Solicitudes();
+        System.out.println(slc.getSReservation());
         VentanaInicio n = new VentanaInicio();
         //System.out.println("Hello World!");
         System.out.println("Project execution in progress...");

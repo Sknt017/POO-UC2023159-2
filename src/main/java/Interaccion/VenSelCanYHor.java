@@ -8,6 +8,7 @@ import java.util.Date;
 import Procedimientos.Canchas;
 import Procedimientos.Horarios;
 import Procedimientos.Reserva;
+import Reservas.Solicitudes;
 import java.awt.Dimension;
 import java.awt.event.ItemEvent;
 import java.util.Arrays;
@@ -28,6 +29,10 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         Dimension d = new Dimension(120,180);
         this.jDescripccionC.setMinimumSize(d);
         setResizable(false);
+        Solicitudes slc = new Solicitudes();
+        System.out.println(slc.getSReservation());
+        System.out.println("Email?: "+slc.showResList(1));
+        //comms: the data is lose as soon a new reservation comes. maybe putting the matrix as a supervariable or smt can avoid this problem?
     }
 
     /**
@@ -296,6 +301,7 @@ public class VenSelCanYHor extends javax.swing.JFrame {
         String pTime1 = String.valueOf(this.jCajaDesde.getSelectedItem());
         Horarios ho = new Horarios(Sdia,Smes,Sanio);
         Reserva UR = new Reserva(desdeHoraCB,hastaHoraCB,Sdia,Smes,Sanio,Copt);
+        //Solicitudes sc = new Solicitudes();
         dispose();
         }
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

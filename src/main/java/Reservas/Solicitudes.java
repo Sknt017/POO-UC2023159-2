@@ -31,11 +31,11 @@ public class Solicitudes {
 //            ResList[0][i]=columnNames[i];
 //       }
 //    };
-    public Solicitudes(){
-//            for(int i = 0;i<this.columnNames.length;i++){
+//    public Solicitudes(){
+//        for(int i = 0;i<this.columnNames.length;i++){
 //            ResList[0][i]=columnNames[i];
-//       }
-    }
+//        }
+//    }
     public Solicitudes(ArrayList<Object> ReservationF) {
         SReservation = ReservationF;
         //only storages one reservation
@@ -89,4 +89,23 @@ public class Solicitudes {
 //        
 //    }
     }
+
+    public Solicitudes() {
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public ArrayList<Object> getSReservation() {
+        return SReservation;
+    }
+
+//    public String[][] getResList(int a) {
+//        return ResList[a][0];
+//    }
+    
+    public String showResList(int a){
+        String Value2D = this.ResList[1][a];
+        return Value2D;
+    }
+    
+    
 }
