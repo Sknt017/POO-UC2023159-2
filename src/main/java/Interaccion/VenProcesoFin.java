@@ -16,10 +16,6 @@ public class VenProcesoFin extends javax.swing.JFrame {
      * Creates new form VenProcesoFin
      */
     public VenProcesoFin() {
-//        initComponents();
-//        Referencias re = new Referencias(); //this better be called at the end of all the forms
-//        String Ref = re.generarReferencia();
-//        this.JReservaNo.setText(Ref);
     }
 
     VenProcesoFin(String RefRes) {
@@ -113,10 +109,6 @@ public class VenProcesoFin extends javax.swing.JFrame {
         this.newR();
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel JReservaNo;
     private javax.swing.JButton jButton1;
@@ -130,7 +122,5 @@ public class VenProcesoFin extends javax.swing.JFrame {
         n.setVisible(true);
         this.dispose();
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    //make it save and read files
-    
+    }    
 }
