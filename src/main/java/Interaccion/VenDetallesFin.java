@@ -22,7 +22,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
     String nof,euf,RefRes;
     Long pnf,pn2f;
     int a;
-    ArrayList<Object> Reservation = new ArrayList<>();
+    ArrayList<Object> Reservation = new ArrayList<>();//change to arraylist string?
 //    String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2","Metodo Pago",
 //                            "Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
 //    String[][] ResList= new String[this.columnNames.length][12];
@@ -199,8 +199,9 @@ public class VenDetallesFin extends javax.swing.JFrame {
 //        }
 //        System.out.println(Arrays.toString(ResList[0])+"\n"+Arrays.toString(ResList[1])+"\n"+Arrays.toString(ResList[2]));
         //System.out.println(Reservation.size());
-        VenProcesoFin endPro = new VenProcesoFin(RefRes);
-        Solicitudes RS = new Solicitudes(Reservation);
+        VenProcesoFin endPro = new VenProcesoFin(Reservation);
+        //Solicitudes RS = new Solicitudes(Reservation);
+        this.Reservation.getLast();
         this.dispose();
         endPro.show();
         this.setVisible(false);

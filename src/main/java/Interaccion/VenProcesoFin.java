@@ -5,12 +5,15 @@
 package Interaccion;
 
 import Procedimientos.Referencias;
+import Reservas.Solicitudes;
+import java.util.ArrayList;
 
 /**
  *
  * @author dasan
  */
 public class VenProcesoFin extends javax.swing.JFrame {
+    ArrayList<Object> EndReservation = new ArrayList<>();
 
     /**
      * Creates new form VenProcesoFin
@@ -18,9 +21,10 @@ public class VenProcesoFin extends javax.swing.JFrame {
     public VenProcesoFin() {
     }
 
-    VenProcesoFin(String RefRes) {
+    VenProcesoFin(ArrayList<Object> Reservation) {
+        this.EndReservation = Reservation;//too redundant
         initComponents();
-        this.JReservaNo.setText(RefRes);
+        this.JReservaNo.setText((String) Reservation.getLast());
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -119,6 +123,7 @@ public class VenProcesoFin extends javax.swing.JFrame {
 
     private void newR() {
         VenSelCanYHor n = new VenSelCanYHor();
+        Solicitudes RS = new Solicitudes(EndReservation);
         n.setVisible(true);
         this.dispose();
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
