@@ -19,6 +19,7 @@ public class POOUC {
         VentanaInicio n = new VentanaInicio();
         //System.out.println("Hello World!");
         System.out.println("Project execution in progress...");
+        System.out.println(slc.showResList(0));
         n.show();
     }
 }
