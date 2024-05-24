@@ -275,7 +275,6 @@ public class VenMetodoPago extends javax.swing.JFrame {
 
     private void pneq() {
         ImageIcon icon = new ImageIcon("src/qrneq.png");
-        //JOptionPane.showConfirmDialog(JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE,icon);
         int a= JOptionPane.showConfirmDialog(this, "mostrar factura en caja", "Pago Nequi", JOptionPane.CLOSED_OPTION , JOptionPane.PLAIN_MESSAGE, icon);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
