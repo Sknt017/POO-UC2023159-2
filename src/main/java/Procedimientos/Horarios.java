@@ -12,11 +12,6 @@ import java.util.Date;
  * @author dasan
  */
 public class Horarios {
-    // desplegar los datos recibidos del jframe form venselcanyhor aca
-    // realizar lo mismo en canchas.java
-    //***********************************************************************************
-    //esta clase es para verififcar que la franja horaria seleccionada se encuentre disponible para reservar.
-    //si no es asi devolvera un error para cambiar las horas de reservacion
     public Date fechaReserva;
     public int horasReserva;
     public Horarios(int Sdia, int Smes, int Sanio) {
