@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
  *
  * @author dasan
  */
-public class VenSelCanYHor extends javax.swing.JFrame {
+public class VenSelCanYHor extends javax.swing.JFrame{
 
     /**
      * Creates new form VenSelCanYHor

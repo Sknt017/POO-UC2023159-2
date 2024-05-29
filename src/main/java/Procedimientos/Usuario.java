@@ -7,12 +7,13 @@ package Procedimientos;
 import Interaccion.VenDetallesFin;
 import Interaccion.VenMetodoPago;
 import Interaccion.VentanaDatosContacto;
+import com.mycompany.poo.uc.POOUC;
 
 /**
  *
  * @author dasan
  */
-public class Usuario {    
+public class Usuario extends POOUC{    
     VentanaDatosContacto vcu = new VentanaDatosContacto();
     private String nombreUsuario;
     private String correoElectronicoUsuario;
@@ -23,6 +24,7 @@ public class Usuario {
     }
 
     public Usuario(String NombreU, String UEmail, Long Tel1, Long Tel2, String[] ReseF) {
+        //Usuario usu = new Usuario();
         this.nombreUsuario = NombreU;
         this.correoElectronicoUsuario = UEmail;
         this.numeroContacto1 = Tel1;
@@ -36,8 +38,9 @@ public class Usuario {
     }    
     @Override
     public String toString() {
+        Usuario usu = new Usuario();
         return "Nombre: "+nombreUsuario+
-                "\n Email: "+correoElectronicoUsuario+"\n Numero 1: "+numeroContacto1+"\n Numero 2: "+numeroContacto2;
+                "\n Email: "+correoElectronicoUsuario+"\n Numero 1: "+numeroContacto1+"\n Numero 2: "+numeroContacto2 ;
     }
     
 }

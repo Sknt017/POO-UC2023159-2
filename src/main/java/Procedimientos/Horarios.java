@@ -5,6 +5,7 @@
 package Procedimientos;
 
 import Interaccion.VentanaDatosContacto;
+import com.mycompany.poo.uc.POOUC;
 import java.util.Date;
 
 /**
