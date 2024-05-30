@@ -4,6 +4,7 @@
  */
 package Reservas;
 
+import com.mycompany.poo.uc.POOUC;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -17,12 +18,21 @@ import java.util.List;
  *
  * @author dasan
  */
-public class Solicitudes {
+public class Solicitudes extends POOUC{
     ArrayList<Object> SReservation;
     String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2","Metodo Pago",
                             "Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
-    String[][] ResList= new String[this.columnNames.length][12];
+    String[][] ResList= new String[this.columnNames.length][12];;
+    String[][] ResPUC = new String[12][12];
     int a = 1;
+        public Solicitudes() {
+        Solicitudes sc =new Solicitudes();
+        //System.out.println(sc.ResT);
+        
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    
     //this.ResList[0][0] = columnNames[1];
     //List<String> ResL;
 
@@ -36,7 +46,8 @@ public class Solicitudes {
 //            ResList[0][i]=columnNames[i];
 //        }
 //    }
-    public Solicitudes(ArrayList<Object> ReservationF) {
+    public Solicitudes (ArrayList<Object> ReservationF) {
+        Solicitudes sc = new Solicitudes();
         SReservation = ReservationF;
         //only storages one reservation
         for(int i = 0;i<this.columnNames.length;i++){
@@ -90,9 +101,7 @@ public class Solicitudes {
 //    }
     }
 
-    public Solicitudes() {
-        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+
 
     public ArrayList<Object> getSReservation() {
         return SReservation;
