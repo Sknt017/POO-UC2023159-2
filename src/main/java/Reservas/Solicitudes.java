@@ -26,8 +26,9 @@ public class Solicitudes extends POOUC{
     String[][] ResPUC = new String[12][12];
     int a = 1;
         public Solicitudes() {
-        Solicitudes sc =new Solicitudes();
+        //Solicitudes sc =new Solicitudes();
         //System.out.println(sc.ResT);
+            System.out.println("");
         
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
