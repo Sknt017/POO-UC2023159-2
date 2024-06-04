@@ -18,7 +18,7 @@ import java.util.List;
  *
  * @author dasan
  */
-public class Solicitudes extends POOUC{
+public class Solicitudes{
     ArrayList<Object> SReservation;
     String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2","Metodo Pago",
                             "Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
@@ -62,6 +62,7 @@ public class Solicitudes extends POOUC{
         }
         System.out.println("in solicitudes.java: "+SReservation);
         System.out.println("position: "+a);
+        POOUC RL = new POOUC(SReservation);
         for(int i = 0;i<a;i++){
             if(ResList[a][0]!=null){
                 a++;

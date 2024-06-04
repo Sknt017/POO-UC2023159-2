@@ -20,8 +20,8 @@ public class Usuario extends POOUC{
     private Long numeroContacto1;
     private Long numeroContacto2;
 
-    public Usuario(String NombreU, String UEmail, Long Tel1, Long Tel2) {
-    }
+    //public Usuario(String NombreU, String UEmail, Long Tel1, Long Tel2) {
+    //}
 
     public Usuario(String NombreU, String UEmail, Long Tel1, Long Tel2, String[] ReseF) {
         //Usuario usu = new Usuario();
@@ -33,14 +33,14 @@ public class Usuario extends POOUC{
         VenMetodoPago sli5 =   new VenMetodoPago(UserD,ReseF);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    public Usuario() {
+    //public Usuario() {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }    
-    @Override
-    public String toString() {
-        Usuario usu = new Usuario();
-        return "Nombre: "+nombreUsuario+
-                "\n Email: "+correoElectronicoUsuario+"\n Numero 1: "+numeroContacto1+"\n Numero 2: "+numeroContacto2 ;
-    }
+    //}    
+//    @Override
+//    public String toString() {
+//        Usuario usu = new Usuario();
+//        return "Nombre: "+nombreUsuario+
+//                "\n Email: "+correoElectronicoUsuario+"\n Numero 1: "+numeroContacto1+"\n Numero 2: "+numeroContacto2 ;
+//    }
     
 }
