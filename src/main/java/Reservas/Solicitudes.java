@@ -20,12 +20,10 @@ import java.util.List;
  */
 public class Solicitudes{
     ArrayList<Object> SReservation;
-    String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2","Metodo Pago",
-                            "Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
-    String[][] ResList= new String[this.columnNames.length][12];;
-    String[][] ResPUC = new String[12][12];
-    int a = 1;
-        public Solicitudes() {
+    //String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2","Metodo Pago",
+    //                      "Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
+    //String[][] ResList= new String[this.columnNames.length][12];;
+    public Solicitudes() {
         //Solicitudes sc =new Solicitudes();
         //System.out.println(sc.ResT);
             System.out.println("");
@@ -51,25 +49,25 @@ public class Solicitudes{
         Solicitudes sc = new Solicitudes();
         SReservation = ReservationF;
         //only storages one reservation
-        for(int i = 0;i<this.columnNames.length;i++){
-            ResList[0][i]=columnNames[i];
-        }
-        System.out.println(Arrays.toString(ResList[1]));
-        //use matrix as a list
-        for(int i = 0;i<columnNames.length;i++){
-            //SReservation.set(i, ResList[a][i]);
-            ResList[a][i] = (String) SReservation.get(i);
-        }
+//        for(int i = 0;i<this.columnNames.length;i++){
+//            ResList[0][i]=columnNames[i];
+//        }
+//        System.out.println(Arrays.toString(ResList[1]));
+//        //use matrix as a list
+//        for(int i = 0;i<columnNames.length;i++){
+//            //SReservation.set(i, ResList[a][i]);
+//            ResList[a][i] = (String) SReservation.get(i);
+//        }
         System.out.println("in solicitudes.java: "+SReservation);
-        System.out.println("position: "+a);
+//        System.out.println("position: "+a);
         POOUC RL = new POOUC(SReservation);
-        for(int i = 0;i<a;i++){
-            if(ResList[a][0]!=null){
-                a++;
-            }
-        }
+//        for(int i = 0;i<a;i++){
+//            if(ResList[a][0]!=null){
+//                a++;
+//            }
+//        }
         //a++;
-        System.out.println(Arrays.toString(ResList[0])+"\n"+Arrays.toString(ResList[1])+"\n"+Arrays.toString(ResList[2]));
+//        System.out.println(Arrays.toString(ResList[0])+"\n"+Arrays.toString(ResList[1])+"\n"+Arrays.toString(ResList[2]));
         //SReservation.g
 //        try{
 //            FileOutputStream writeData = new FileOutputStream("reservations.resl");
@@ -113,10 +111,10 @@ public class Solicitudes{
 //        return ResList[a][0];
 //    }
     
-    public String showResList(int a){
-        String Value2D = this.ResList[1][a];
-        return Value2D;
-    }
+//    public String showResList(int a){
+//        String Value2D = this.ResList[1][a];
+//        return Value2D;
+//    }
     
     
 }
