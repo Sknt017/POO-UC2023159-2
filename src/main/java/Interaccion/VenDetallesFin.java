@@ -31,6 +31,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
      *
      * @param UserD User Data Reservation (contact details)
      * @param ReseF User Reservation Details (stage, date and hours)
+     * @param UserPay user Payment method 
      */
     public VenDetallesFin(String[] UserD, String[] ReseF, String UserPay) {
 //        System.out.println(columnNames.length+"\n");
@@ -50,7 +51,7 @@ public class VenDetallesFin extends javax.swing.JFrame {
         pnf = Long.valueOf(UserD[2]);
         pn2f = Long.valueOf(UserD[3]);
         this.jResumen.append("nombre Usuario: "+nof+"\nCorreo Electronico Registrado: "+euf+"\nnumero de contacto "+pnf+"\notro numero de contacto: "+pn2f/*+"\nNo. Reservacion: "+Ref*/);
-        this.jResumen.append("\nDesde la(s): "+ReseF[0]+"\nHasta la(s): "+ReseF[1]+"\nEl: "+ReseF[2]+" / "+ReseF[3]+" / "+ReseF[4]+"\ncancha: "+ReseF[5]);
+        this.jResumen.append("\nDesde la(s): "+ReseF[0]+"\nHasta la(s): "+ReseF[1]+"\nEl: "+ReseF[2]+" / "+ReseF[3]+" / "+ReseF[4]+"\ncancha: "+ReseF[5]+"\nMetodo Pago: "+UserPay);
         System.out.println("whole reservation details: "+Reservation);
         this.jResumen.setEditable(false);
     }

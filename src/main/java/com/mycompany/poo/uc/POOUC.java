@@ -33,6 +33,7 @@ private static String ResT[][] = new String[12][12];
         System.out.println("Project execution in progress...");
         //System.out.println(slc.showResList(0));
         n.show();
+        //System.out.println("Closing...");
         }
     
 
