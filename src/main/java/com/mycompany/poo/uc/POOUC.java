@@ -8,6 +8,7 @@ import Interaccion.VentanaInicio;
 import Reservas.Solicitudes;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  *
@@ -33,6 +34,13 @@ private static String ResT[][] = new String[12][12];
         System.out.println("Project execution in progress...");
         //System.out.println(slc.showResList(0));
         n.show();
+        /*//create a cli for administration************************
+        Scanner sc = new Scanner(System.in);
+        System.out.println("command?.. ");
+        String com = sc.next();
+        System.out.println("read: "+com);
+        ************************************************************
+        */
         //System.out.println("Closing...");
         }
     
