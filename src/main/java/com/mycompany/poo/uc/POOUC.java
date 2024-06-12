@@ -36,12 +36,15 @@ private static String ResT[][] = new String[12][12];
         n.show();
         /*//create a cli for administration************************
         Scanner sc = new Scanner(System.in);
+        int opt;
+        do{
         System.out.println("command?.. ");
         String com = sc.next();
         System.out.println("read: "+com);
+        //System.out.println("Closing...");}while(opt!=3);
         ************************************************************
         */
-        //System.out.println("Closing...");
+        
         }
     
 
