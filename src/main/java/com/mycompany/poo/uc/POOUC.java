@@ -35,6 +35,7 @@ private static String ResT[][] = new String[12][12];
         //System.out.println(slc.showResList(0));
         n.show();
         /*//create a cli for administration************************
+        func exp excel:https://www.youtube.com/watch?v=FLLeDTtFBbQ
         Scanner sc = new Scanner(System.in);
         int opt;
         do{
@@ -44,7 +45,7 @@ private static String ResT[][] = new String[12][12];
         System.out.println("3. exit");
         String com = sc.next();
         System.out.println("read: "+com);
-        //}while(opt!=3);
+        }while(opt!=3);
         System.out.println("Closing...");
         ************************************************************
         */
