@@ -274,6 +274,7 @@ public class VenSelCanYHor extends javax.swing.JFrame{
     }
 
     private void irADatosContacto() {
+        
         int SelCan = TCancha()
                 ,desdeHora = this.jCajaDesde.getSelectedIndex()+3
                 ,hastaHora = this.jCajaHasta.getSelectedIndex()
@@ -289,6 +290,7 @@ public class VenSelCanYHor extends javax.swing.JFrame{
         Sdia = calendar.get(Calendar.DATE);
         Smes = calendar.get(Calendar.MONTH);
         Sanio = calendar.get(Calendar.YEAR);
+        //bool chkDips; chkDips=this.avaCheck(); if(chkDips==true){var b = JOptionPane.showConfirmDialog(rootPane, "no disp. cambiar a un diponible", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);}else{
         if(SelCan==0||this.dateCheck(Sdia,Smes,Sanio)==false||this.dateCheck()==false){
             if(SelCan==0){
                 var b = JOptionPane.showConfirmDialog(rootPane, "Favor Seleccionar una cancha", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
@@ -304,6 +306,7 @@ public class VenSelCanYHor extends javax.swing.JFrame{
         //Solicitudes sc = new Solicitudes();
         dispose();
         }
+        //}
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -376,4 +379,12 @@ public class VenSelCanYHor extends javax.swing.JFrame{
         return !"-".equals(timePicked);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    /*
+    private boolean avaCheck(){
+        //send date values to the matrix method on the main java file
+        //check from the matrix if its avaliable the picked date.
+        //if its avaliable then return false
+        //else return true
+    }
+    */
 }
