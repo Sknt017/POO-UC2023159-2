@@ -34,20 +34,21 @@ private static String ResT[][] = new String[12][12];
         System.out.println("Project execution in progress...");
         //System.out.println(slc.showResList(0));
         n.show();
-        /*//create a cli for administration************************
-        func exp excel:https://www.youtube.com/watch?v=FLLeDTtFBbQ
-        Scanner sc = new Scanner(System.in);
-        int opt;
-        do{
-        System.out.println("menu?.. ");
-        System.out.println("1. ");
-        System.out.println("2. ");
-        System.out.println("3. exit");
-        String com = sc.next();
-        System.out.println("read: "+com);
-        }while(opt!=3);
+        /*//create a cli for administration*************************/
+        //func exp excel:https://www.youtube.com/watch?v=FLLeDTtFBbQ
+        POOUC.consIntera();
+//        Scanner sc = new Scanner(System.in);
+//        int opt;
+//        do{
+//        System.out.println("menu?.. ");
+//        System.out.println("1. ");
+//        System.out.println("2. ");
+//        System.out.println("3. exit");
+//        String com = sc.next();
+//        System.out.println("read: "+com);
+//        }while(opt!=3);
         System.out.println("Closing...");
-        ************************************************************
+        /*************************************************************
         */
         
         }
@@ -67,5 +68,19 @@ private static String ResT[][] = new String[12][12];
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public POOUC(){}
+    public static void consIntera(){
+        Scanner sc = new Scanner(System.in);
+        int opt = 0;
+        do{
+        //System.out.println("read: "+com);
+        System.out.println("menu?.. ");
+        System.out.println("1. ");
+        System.out.println("2. ");
+        System.out.println("3. exit");
+        String com = sc.next();
+        opt = Integer.parseInt(com);
+        System.out.println("read: "+com);
+        }while(opt!=3);
+    }
     
 }
