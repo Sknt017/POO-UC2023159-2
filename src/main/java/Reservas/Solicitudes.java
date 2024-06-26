@@ -20,31 +20,11 @@ import java.util.List;
  */
 public class Solicitudes{
     ArrayList<Object> SReservation;
-    //String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2","Metodo Pago",
-    //                      "Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
-    //String[][] ResList= new String[this.columnNames.length][12];;
     public Solicitudes() {
-        //Solicitudes sc =new Solicitudes();
-        //System.out.println(sc.ResT);
             System.out.println("");
         
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
-    
-    //this.ResList[0][0] = columnNames[1];
-    //List<String> ResL;
-
-//    public void fillHeader(){
-//        for(int i = 0;i<this.columnNames.length;i++){
-//            ResList[0][i]=columnNames[i];
-//       }
-//    };
-//    public Solicitudes(){
-//        for(int i = 0;i<this.columnNames.length;i++){
-//            ResList[0][i]=columnNames[i];
-//        }
-//    }
     public Solicitudes (ArrayList<Object> ReservationF) {
         Solicitudes sc = new Solicitudes();
         SReservation = ReservationF;
