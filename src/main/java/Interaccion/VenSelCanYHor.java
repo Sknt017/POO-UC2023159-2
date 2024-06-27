@@ -30,7 +30,7 @@ public class VenSelCanYHor extends javax.swing.JFrame{
         this.jDescripccionC.setMinimumSize(d);
         setResizable(false);
         Solicitudes slc = new Solicitudes();
-        System.out.println(slc.getSReservation());
+        //System.out.println(slc.getSReservation());
         //System.out.println("Email?: "+slc.showResList(1));
         //comms: the data is lose as soon a new reservation comes. maybe putting the matrix as a supervariable or smt can avoid this problem?
     }

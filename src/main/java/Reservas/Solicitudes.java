@@ -26,8 +26,8 @@ public class Solicitudes{
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public Solicitudes (ArrayList<Object> ReservationF) {
-        Solicitudes sc = new Solicitudes();
         SReservation = ReservationF;
+        POOUC mc = new POOUC();
         //only storages one reservation
 //        for(int i = 0;i<this.columnNames.length;i++){
 //            ResList[0][i]=columnNames[i];
@@ -40,7 +40,7 @@ public class Solicitudes{
 //        }
         System.out.println("in solicitudes.java: "+SReservation);
 //        System.out.println("position: "+a);
-        POOUC RL = new POOUC(SReservation);
+        //POOUC RL = new POOUC(SReservation);
 //        for(int i = 0;i<a;i++){
 //            if(ResList[a][0]!=null){
 //                a++;
@@ -49,18 +49,18 @@ public class Solicitudes{
         //a++;
 //        System.out.println(Arrays.toString(ResList[0])+"\n"+Arrays.toString(ResList[1])+"\n"+Arrays.toString(ResList[2]));
         //SReservation.g
-//        try{
-//            FileOutputStream writeData = new FileOutputStream("reservations.resl");
-//            try (ObjectOutputStream writeStream = new ObjectOutputStream(writeData)) {
-//                writeStream.writeObject(SReservation);
-//                writeStream.flush();
-//            }
-//
-//        }catch (IOException e) {
-//            System.out.println(e);
-//}
-        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-//    }
+        try{
+            FileOutputStream writeData = new FileOutputStream("reservations.resl");
+            try (ObjectOutputStream writeStream = new ObjectOutputStream(writeData)) {
+//                writeStream.writeString(this.expMat());
+                writeStream.flush();
+            }
+
+        }catch (IOException e) {
+            System.out.println(e);
+}
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
 //    public Solicitudes() {
 //        try{
@@ -79,13 +79,19 @@ public class Solicitudes{
 //    public void cancelarReserva(){
 //        
 //    }
+
+    private String[][] expMat() {
+        POOUC mc = new POOUC();
+        String mcD[][] = mc.getResT();
+        return mcD;
+    }
     }
 
 
 
-    public ArrayList<Object> getSReservation() {
-        return SReservation;
-    }
+//    public ArrayList<Object> getSReservation() {
+//        return SReservation;
+//    }
 
 //    public String[][] getResList(int a) {
 //        return ResList[a][0];
@@ -95,6 +101,3 @@ public class Solicitudes{
 //        String Value2D = this.ResList[1][a];
 //        return Value2D;
 //    }
-    
-    
-}
