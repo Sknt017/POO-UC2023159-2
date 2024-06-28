@@ -27,7 +27,7 @@ public class Solicitudes{
     }
     public Solicitudes (ArrayList<Object> ReservationF) {
         SReservation = ReservationF;
-        POOUC mc = new POOUC();
+        //POOUC mc = new POOUC();
         //only storages one reservation
 //        for(int i = 0;i<this.columnNames.length;i++){
 //            ResList[0][i]=columnNames[i];
@@ -81,8 +81,8 @@ public class Solicitudes{
 //    }
 
     private String[][] expMat() {
-        POOUC mc = new POOUC();
-        String mcD[][] = mc.getResT();
+        //POOUC mc = new POOUC();
+        String mcD[][] = POOUC.getResT();
         return mcD;
     }
     }
