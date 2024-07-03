@@ -32,7 +32,6 @@ private static String ResT[][] = new String[12][12];
         //System.out.println(slc.getSReservation());
         VentanaInicio n = new VentanaInicio();
         System.out.println("Project execution in progress...");
-        //System.out.println(slc.showResList(0));
         n.show();
         /*//create a cli for administration*************************/
         //func exp excel:https://www.youtube.com/watch?v=FLLeDTtFBbQ
