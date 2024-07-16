@@ -4,6 +4,9 @@
  */
 package Interaccion;
 
+import com.mycompany.poo.uc.POOUC;
+import java.util.Arrays;
+
 /**
  *
  * @author dasan
@@ -15,6 +18,7 @@ public class VentanaInicio extends javax.swing.JFrame {
      */
     public VentanaInicio() {
         initComponents();
+        System.out.println(Arrays.deepToString(POOUC.getResT()));
     }
 
     /**

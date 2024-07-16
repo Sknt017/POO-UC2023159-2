@@ -122,7 +122,7 @@ public class VenProcesoFin extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void newR() {
-        VenSelCanYHor n = new VenSelCanYHor();
+        VentanaInicio n = new VentanaInicio();
         Solicitudes RS = new Solicitudes(EndReservation);
         n.setVisible(true);
         this.dispose();

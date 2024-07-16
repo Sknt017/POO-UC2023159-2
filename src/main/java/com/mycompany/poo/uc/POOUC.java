@@ -20,6 +20,18 @@ private static String ResT[][] = new String[12][12];
     public static String[][] getResT() {
         return ResT;
     }
+    public String[] getResT(String RefNo) {
+        String ResSpecRes[] = new String[12];
+        System.out.println(RefNo);
+        //System.out.println(this.getResT());
+        for(int i =0; i<12 ;i++){
+            System.out.println(ResT[i][11]);
+            if(ResT[i][11] == null ? RefNo == null : ResT[i][11].equals(RefNo)){
+                System.arraycopy(ResT[i], 0, ResSpecRes, 0, 12);                
+            }        
+        }
+        return ResSpecRes;
+    }
 
     public static void setResT(String[][] ResT) {
         POOUC.ResT = ResT;

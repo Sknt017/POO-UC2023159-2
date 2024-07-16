@@ -40,7 +40,7 @@ public class Solicitudes{
 //        }
         System.out.println("in solicitudes.java: "+SReservation);
 //        System.out.println("position: "+a);
-        //POOUC RL = new POOUC(SReservation);
+        POOUC RL = new POOUC(SReservation);
 //        for(int i = 0;i<a;i++){
 //            if(ResList[a][0]!=null){
 //                a++;
@@ -59,7 +59,7 @@ public class Solicitudes{
         }catch (IOException e) {
             System.out.println(e);
 }
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 //    public Solicitudes() {
