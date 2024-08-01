@@ -5,6 +5,7 @@
 package Interaccion;
 
 import com.mycompany.poo.uc.POOUC;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,6 +18,7 @@ public class VenCancelReserva extends javax.swing.JFrame {
      */
     public VenCancelReserva() {
         initComponents();
+        this.jCanRes.setEnabled(false);
     }
 
     /**
@@ -73,6 +75,11 @@ public class VenCancelReserva extends javax.swing.JFrame {
         });
 
         jCanRes.setText("Can. Reserva");
+        jCanRes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCanResActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -139,6 +146,17 @@ public class VenCancelReserva extends javax.swing.JFrame {
         this.updateDetView();
     }//GEN-LAST:event_jVisualizarActionPerformed
 
+    private void jCanResActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCanResActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(null, "Do you want to proceed?", "Confirm", JOptionPane.YES_NO_OPTION);
+        if (response == JOptionPane.YES_OPTION) {
+            //System.out.println("You selected Yes.");
+            this.cancelarReser();
+        } else if (response == JOptionPane.NO_OPTION) {
+            //System.out.println("You selected No.");
+        }
+    }//GEN-LAST:event_jCanResActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBoAtras;
     private javax.swing.JButton jButton1;
@@ -163,19 +181,31 @@ public class VenCancelReserva extends javax.swing.JFrame {
     }
 
     private void updateDetView() {
+        this.jResRet.setText("");
         String TargetReference = this.jObtRef.getText();
         String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2","Metodo Pago","Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
         POOUC m = new POOUC();
         String ObtRes[] = m.getResT(TargetReference);
         if(ObtRes[1]==null){
             this.jResRet.append("No se encontro...");
+            this.jCanRes.setEnabled(false);
         }else{
             for(int i = 0; i<11 ; i++){
                 this.jResRet.append(columnNames[i]+": "+ObtRes[i]+"\n");    
             }
-            
+            this.jCanRes.setEnabled(true);
         }
         
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void cancelarReser() {
+        String TargetReference = this.jObtRef.getText();
+        //POOUC m = new POOUC();
+        //int RefTar = Integer.parseInt(this.jObtRef.getText());
+        POOUC.setResT(TargetReference);
+        var b = JOptionPane.showConfirmDialog(rootPane, "Reserva Cancelada.", "Informacion", JOptionPane.CLOSED_OPTION, JOptionPane.INFORMATION_MESSAGE);
+        this.regresar();
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

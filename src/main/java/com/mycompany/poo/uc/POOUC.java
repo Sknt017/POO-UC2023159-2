@@ -22,10 +22,10 @@ private static String ResT[][] = new String[12][12];
     }
     public String[] getResT(String RefNo) {
         String ResSpecRes[] = new String[12];
-        System.out.println(RefNo);
+        //System.out.println(RefNo);
         //System.out.println(this.getResT());
         for(int i =0; i<12 ;i++){
-            System.out.println(ResT[i][11]);
+            //System.out.println(ResT[i][11]);
             if(ResT[i][11] == null ? RefNo == null : ResT[i][11].equals(RefNo)){
                 System.arraycopy(ResT[i], 0, ResSpecRes, 0, 12);                
             }        
@@ -35,6 +35,19 @@ private static String ResT[][] = new String[12][12];
 
     public static void setResT(String[][] ResT) {
         POOUC.ResT = ResT;
+    }
+    public static void setResT(String RefTar) {
+        for(int i =0; i<12 ;i++){
+            //System.out.println(ResT[i][11]);
+            if(ResT[i][11] == null ? RefTar == null : ResT[i][11].equals(RefTar)){
+                for(int j=0;j<12;j++){
+                        ResT[i][j]=null;
+                        }
+                //System.arraycopy(ResT[i], 0, ResSpecRes, 0, 12);                
+            }        
+        }
+        //POOUC.ResT = ResT;
+        System.out.println(Arrays.deepToString(ResT));
     }
             public static void main(String[] args) {
         String[] columnNames = {"Nombre", "Correo Electronico", "Numero Telefono", "Numero Telefono 2","Metodo Pago","Hora Inicio","Hora Fin", "Dia", "Mes", "Anio", "Cancha", "Id. Reservacion"};
@@ -47,7 +60,7 @@ private static String ResT[][] = new String[12][12];
         n.show();
         /*//create a cli for administration*************************/
         //func exp excel:https://www.youtube.com/watch?v=FLLeDTtFBbQ
-        POOUC.consIntera();
+//        POOUC.consIntera();****************************************************
 //        Scanner sc = new Scanner(System.in);
 //        int opt;
 //        do{
@@ -79,19 +92,19 @@ private static String ResT[][] = new String[12][12];
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     public POOUC(){}
-    public static void consIntera(){
-        Scanner sc = new Scanner(System.in);
-        int opt = 0;
-        do{
-        //System.out.println("read: "+com);
-        System.out.println("menu?.. ");
-        System.out.println("1. ");
-        System.out.println("2. ");
-        System.out.println("3. exit");
-        String com = sc.next();
-        opt = Integer.parseInt(com);
-        System.out.println("read: "+com);
-        }while(opt!=3);
-    }
+//    public static void consIntera(){*****************************************
+//        Scanner sc = new Scanner(System.in);
+//        int opt = 0;
+//        do{
+//        //System.out.println("read: "+com);
+//        System.out.println("menu?.. ");
+//        System.out.println("1. ");
+//        System.out.println("2. ");
+//        System.out.println("3. exit");
+//        String com = sc.next();
+//        opt = Integer.parseInt(com);
+//        System.out.println("read: "+com);
+//        }while(opt!=3);
+//    }
     
 }
