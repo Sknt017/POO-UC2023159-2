@@ -41,6 +41,6 @@ public class Usuario extends POOUC{
 //        Usuario usu = new Usuario();
 //        return "Nombre: "+nombreUsuario+
 //                "\n Email: "+correoElectronicoUsuario+"\n Numero 1: "+numeroContacto1+"\n Numero 2: "+numeroContacto2 ;
-//    }
+//    } is everything ok?... 
     
 }
