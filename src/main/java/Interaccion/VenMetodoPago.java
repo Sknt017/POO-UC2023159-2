@@ -302,7 +302,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
                 VenDetallesFin s = new VenDetallesFin();
                 dispose();
             }catch(NumberFormatException e){
-                var b = JOptionPane.showConfirmDialog(rootPane, "Validar numeros registrados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+                int b = JOptionPane.showConfirmDialog(rootPane, "Validar numeros registrados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             }
 
         }
@@ -361,7 +361,7 @@ public class VenMetodoPago extends javax.swing.JFrame {
     }
 
     private void Pefe() {
-        var b = JOptionPane.showConfirmDialog(rootPane, "Para pago en efectivo favor confirmar \n   en caja en el lugar de la reserva", "Informacion", JOptionPane.CLOSED_OPTION, JOptionPane.INFORMATION_MESSAGE);
+        int b = JOptionPane.showConfirmDialog(rootPane, "Para pago en efectivo favor confirmar \n   en caja en el lugar de la reserva", "Informacion", JOptionPane.CLOSED_OPTION, JOptionPane.INFORMATION_MESSAGE);
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

@@ -216,9 +216,9 @@ public class VentanaDatosContacto extends javax.swing.JFrame {
             Usuario du = new Usuario (NombreU,UEmail,Tel1,Tel2,ReseF);
             dispose();
         }catch(NumberFormatException e){
-            var b = JOptionPane.showConfirmDialog(rootPane, "Validar numeros registrados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+            int b = JOptionPane.showConfirmDialog(rootPane, "Validar numeros registrados", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
         }catch(IllegalArgumentException e){
-            var b = JOptionPane.showConfirmDialog(rootPane, "Validar Correo electronico registrado", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+            int b = JOptionPane.showConfirmDialog(rootPane, "Validar Correo electronico registrado", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
         }
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }

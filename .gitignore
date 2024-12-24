@@ -1,2 +1,10 @@
 /target/
 ./reservations.resl
+reservations.resl
+./sonar-project.properties
+sonar-project.properties
+.scannerwork/
+hs_err_pid11556.log
+hs_err_pid4596.log
+mvn
+

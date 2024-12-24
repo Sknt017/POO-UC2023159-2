@@ -204,7 +204,7 @@ public class VenCancelReserva extends javax.swing.JFrame {
         //POOUC m = new POOUC();
         //int RefTar = Integer.parseInt(this.jObtRef.getText());
         POOUC.setResT(TargetReference);
-        var b = JOptionPane.showConfirmDialog(rootPane, "Reserva Cancelada.", "Informacion", JOptionPane.CLOSED_OPTION, JOptionPane.INFORMATION_MESSAGE);
+        int b = JOptionPane.showConfirmDialog(rootPane, "Reserva Cancelada.", "Informacion", JOptionPane.CLOSED_OPTION, JOptionPane.INFORMATION_MESSAGE);
         this.regresar();
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }

@@ -292,9 +292,9 @@ public class VenSelCanYHor extends javax.swing.JFrame{
         //bool chkDips; chkDips=this.avaCheck(); if(chkDips==true){var b = JOptionPane.showConfirmDialog(rootPane, "no disp. cambiar a un diponible", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);}else{
         if(SelCan==0||this.dateCheck(Sdia,Smes,Sanio)==false||this.dateCheck()==false){
             if(SelCan==0){
-                var b = JOptionPane.showConfirmDialog(rootPane, "Favor Seleccionar una cancha", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+                int b = JOptionPane.showConfirmDialog(rootPane, "Favor Seleccionar una cancha", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             }else if(this.dateCheck()==false&&this.dateCheck(Sdia,Smes,Sanio)==true){
-                var b = JOptionPane.showConfirmDialog(rootPane, "Elegir una hora diferente", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+                int b = JOptionPane.showConfirmDialog(rootPane, "Elegir una hora diferente", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             }
         }else{
         
@@ -353,19 +353,19 @@ public class VenSelCanYHor extends javax.swing.JFrame{
         int Cy = calendar.get(Calendar.YEAR);
         
         if(Cy>Sanio){
-            var b = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: anio", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);   
+            int b = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: anio", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);   
             return false;
         }else if(Cm>Smes&&Cy>Sanio){
-            var c = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: mes", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+            int c = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: mes", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             return false;
         }else if(Cm>Smes&&Sanio>Cy){
             //var c = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: mes", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             return true;
         }else if(Cm>Smes){
-            var c = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: mes", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+            int c = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: mes", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             return false;
         }else if(Cd>=Sdia&&Cm>=Smes&&Cy>=Sanio){
-            var d = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: dia", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
+            int d = JOptionPane.showConfirmDialog(rootPane, "Error en fecha seleccionada: dia", "Error en datos ingresados", JOptionPane.CLOSED_OPTION);
             return false;
         } else {
         return true;
